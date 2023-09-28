@@ -1,0 +1,47 @@
+.container {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  display: flex;
+}
+
+.profileImageWrapper {
+  /* Adjust the size to maintain a perfect circle without cutting off the border */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  border-radius: 50%;
+  overflow: hidden; /* Ensure the border stays within the circle */
+  /*TO-DO: MAKE THE BORDER/BACKGROUND DYNAMIC, IF NOT USED FOR PROFILE PIC, THERE SHOULD BE NO BORDER EFFECT*/
+  background-color: rgba(243, 227, 227, 0.575);
+}
+
+.profileImage {
+  /* Adjust the size to fit within the border */
+  height: 95%;
+  width: 95%;
+  object-fit: cover; /* Preserve aspect ratio and cover the entire space */
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+.onlineBadge {
+  position: absolute;
+  bottom: 1px;
+  right: 0px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 1px; /* Add padding for the outer circle */
+}
+
+.onlineDot {
+  width: 8px;
+  height: 8px;
+  background-color: #31a24c;
+  border-radius: 50%;
+  display: block; /* Make the span a block element */
+  margin: auto; /* Center the span horizontally and vertically */
+}
