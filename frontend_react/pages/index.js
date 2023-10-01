@@ -1,4 +1,4 @@
-import ImageContainer from "../components/child-components/image-container";
+import PostButtons from "../components/child-components/buttons/post-buttons";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
         <h3 style={{ marginTop: 0 }}>Facebook Clone Project</h3>
         <div style={{ flex: 1, display: "flex", alignItems: "center" }}>
           {/* call your component here */}
-          <ImageContainer />
+          <PostButtons/>
         </div>
       </main>
     </body>
