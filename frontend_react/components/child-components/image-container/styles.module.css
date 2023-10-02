@@ -5,6 +5,12 @@
   display: flex;
 }
 
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
 .profileImageWrapper {
   /* Adjust the size to maintain a perfect circle without cutting off the border */
   height: 100%;
