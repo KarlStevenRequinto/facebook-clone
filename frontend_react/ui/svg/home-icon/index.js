@@ -2,13 +2,11 @@ const HomeIcon = ({ fill, height, width, stroke, strokeWidth }) => {
   return (
     <span
       style={{
-        backgroundColor: "red",
         display:"flex",
         justifyContent: "center",
         alignItems: "center",
         padding: 0,
         margin: 0,
-        height:"100%"
       }}
     >
       <svg
