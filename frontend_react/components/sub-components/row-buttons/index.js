@@ -1,8 +1,8 @@
-import React from "react";
+import styles from "./styles.module.css";
 
 const RowButton = ({icon,text}) => {
   return (
-    <div>
+    <div className={styles.container}>
       <div>{icon}</div>
       <div>{text}</div>
     </div>
