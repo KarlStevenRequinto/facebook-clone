@@ -15,10 +15,11 @@ export default function Home() {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            flexDirection: "column",
           }}
         >
           {/* call your component here */}
-  
+
         </div>
       </div>
     </div>
