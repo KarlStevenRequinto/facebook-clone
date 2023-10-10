@@ -1,12 +1,6 @@
-const SearchIcon = () => {
+const SearchIcon = ({ width, height,fill }) => {
   return (
-    <svg
-      fill="currentColor"
-      viewBox="0 0 16 16"
-      width="1em"
-      height="1em"
-      class="x1lliihq x1k90msu x2h7rmj x1qfuztq xcza8v6 xlup9mm x1kky2od"
-    >
+    <svg fill={fill} viewBox="0 0 16 16" width={width} height={height}>
       <g fill-rule="evenodd" transform="translate(-448 -544)">
         <g fill-rule="nonzero">
           <path

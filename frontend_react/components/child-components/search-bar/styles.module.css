@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Questrial";
+  src: url("/static/fonts/Questrial-Regular.ttf");
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  background-color: #f0f2f5;
+  border-radius: 25px;
+  padding: 5px 10px;
+}
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.searchInput {
+  border: none;
+  outline: none;
+  background: transparent;
+  margin-left: 5px;
+  font-size: 16px;
+}
+
+.searchInput::placeholder {
+  font-family: "Questrial";
+  color: #65676b;
+}
