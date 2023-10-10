@@ -1,3 +1,5 @@
+import SearchBar from "../components/child-components/search-bar";
+
 export default function Home() {
   return (
     <div style={{ margin: 0, overflow: "hidden" }}>
@@ -19,7 +21,7 @@ export default function Home() {
           }}
         >
           {/* call your component here */}
-
+          <SearchBar />
         </div>
       </div>
     </div>
