@@ -6,12 +6,12 @@ const SearchBar = () => {
   return (
     <div className={styles.searchBar}>
       <span className={styles.iconContainer}>
-        <SearchIcon width={16} height={16} fill={"#65676B"}/>
+        <SearchIcon width={16} height={16} fill={"#65676B"} />
       </span>
       <input
         type="text"
         placeholder="Search Facebook"
-        className={styles.searchInput}
+        className={`${styles.searchInput} ${styles.customPlaceholder}`}
       />
     </div>
   );
