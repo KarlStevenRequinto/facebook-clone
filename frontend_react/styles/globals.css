@@ -1,6 +1,6 @@
 @font-face {
-  src: url("/static/fonts/Questrial-Regular.ttf");
-  font-family: "Questrial";
+  src: url("/static/fonts/Segoe-UI-Historic.TTF"); /* Primary font */
+  font-family: "Segoe UI Historic", "Questrial"; /* Fallback font */
 }
 
 html,
@@ -8,6 +8,7 @@ body {
   padding: 0;
   margin: 0;
   font-family:
+    "Segoe UI Historic",
     "Questrial",
     Inter,
     -apple-system,
