@@ -1,0 +1,16 @@
+.container {
+  background-color: pink;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 56px;
+}
+
+.logoSearchBarContainer {
+  background-color: "green";
+  display: flex;
+  flex-direction: row;
+  padding: 0 16px;
+}
