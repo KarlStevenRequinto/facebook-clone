@@ -1,4 +1,4 @@
-import SearchBar from "../components/child-components/search-bar";
+import SubTitleHeader from "../components/child-components/sub-title-headers";
 
 export default function Home() {
   return (
@@ -21,7 +21,7 @@ export default function Home() {
           }}
         >
           {/* call your component here */}
-          <SearchBar />
+          <SubTitleHeader text="Your Pages and profiles"/>
         </div>
       </div>
     </div>

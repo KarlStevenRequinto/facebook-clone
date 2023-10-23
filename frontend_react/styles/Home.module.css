@@ -4,8 +4,3 @@
     flex-direction: column;
   }
 }
-
-@font-face {
-  src: url("/static/fonts/Questrial-Regular.ttf");
-  font-family: "Questrial";
-}
