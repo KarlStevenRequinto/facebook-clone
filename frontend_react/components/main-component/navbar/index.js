@@ -5,10 +5,14 @@ import GroupsIcon from "../../../ui/svg/groups-icon";
 import GamingIcon from "../../../ui/svg/gaming-icon";
 import MarketPlaceIcon from "../../../ui/svg/marketplace-icon";
 import SearchBar from "../../child-components/search-bar";
+import MenuIcon from "../../../ui/svg/menu-icon";
+import BellIcon from "../../../ui/svg/bell-icon";
+import MessengerIcon from "../../../ui/svg/messenger-icon";
 import styles from "./styles.module.css";
+import ImageContainer from "../../child-components/image-container";
 
 const NavBar = () => {
-  const navIcons = [
+  const navCenterIcons = [
     { component: <HomeIcon height={24} width={24} />, label: "Home" },
     { component: <VideoIcon height={24} width={24} />, label: "Videos" },
     {
@@ -17,6 +21,12 @@ const NavBar = () => {
     },
     { component: <GroupsIcon height={24} width={24} />, label: "Groups" },
     { component: <GamingIcon height={24} width={24} />, label: "Gaming" },
+  ];
+
+  const navRightSideIcons = [
+    { component: <MenuIcon height={20} width={20} />, label: "Menu" },
+    { component: <MessengerIcon height={20} width={20} />, label: "Messenger" },
+    { component: <BellIcon height={20} width={20} />, label: "Bell" },
   ];
 
   return (
@@ -34,7 +44,7 @@ const NavBar = () => {
       {/* container of list of buttons */}
       <div>
         <ul className={styles.listContainer}>
-          {navIcons.map((item, index) => (
+          {navCenterIcons.map((item, index) => (
             <li key={index} className={styles.listItem}>
               <span className={styles.icon}>{item.component}</span>
             </li>
@@ -42,7 +52,18 @@ const NavBar = () => {
         </ul>
       </div>
       {/* container of list of icons */}
-      <div>list of icons</div>
+      <div>
+        <ul className={styles.listContainer}>
+          {navRightSideIcons.map((item, index) => (
+            <li className={styles.rightListIcons} key={index}>
+              <span className={styles.rightIcons}>{item.component}</span>
+            </li>
+          ))}
+          <li>
+            <ImageContainer isOnline={true} />
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };
