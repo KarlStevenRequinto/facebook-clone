@@ -1,10 +1,10 @@
-const GroupsIcon = () => {
+const GroupsIcon = ({fill,width,height}) => {
   return (
     <svg
-      fill="currentColor"
+      fill={fill}
       viewBox="0 0 24 24"
-      width="1em"
-      height="1em"
+      width={width}
+      height={height}
       class="x1lliihq x1k90msu x2h7rmj x1qfuztq xcza8v6 xxk0z11 xvy4d1p"
     >
       <path d="M12 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm-2 4a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>

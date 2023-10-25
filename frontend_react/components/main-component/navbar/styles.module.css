@@ -9,8 +9,34 @@
 }
 
 .logoSearchBarContainer {
-  background-color: "green";
+  height: 100%;
   display: flex;
   flex-direction: row;
   padding: 0 16px;
+  background-color: green;
+}
+.listContainer {
+  display: flex;
+  flex-direction: row;
+  background-color: skyblue;
+  list-style: none;
+  margin: 0;
+  padding: 4px 0;
+}
+
+.listItem {
+  cursor: pointer;
+  width: 130px;
+  border-radius: 8px;
+}
+.listItem:hover {
+  background-color: rgba(68, 73, 80, 0.15)
+}
+
+.icon {
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
