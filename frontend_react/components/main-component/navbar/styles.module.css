@@ -18,17 +18,36 @@
   /* background-color: green; */
 }
 .listContainer {
+  position: relative;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
   /* background-color: skyblue; */
   list-style: none;
+  height: 56px;
   margin: 0;
+  padding: 0;
+}
+
+.btnListContainer {
+  /* padding: 4px 0; */
+}
+.itemContainer {
+  /* background-color: yellow; */
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  position: relative;
   padding: 4px 0;
 }
 .listItem {
   cursor: pointer;
   width: 130px;
   border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 .rightListIcons {
   cursor: pointer;
@@ -50,8 +69,14 @@
   align-items: center;
   justify-content: center;
 }
-.listItem:hover {
-  background-color: #e4e6eb;
+.listItem {
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out; /* Adjust the duration as needed */
+}
+
+.listItem:active {
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: background-color 0s; /* No delay during click */
 }
 
 .icon {
@@ -60,4 +85,20 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+.blueBox {
+  position: absolute;
+  bottom: 0;
+  background-color: #0866ff;
+  width: 95%;
+  transition:
+    height 0.17s ease-in,
+    border-radius 0.14s ease-in;
+  border-radius: 0; /* Initial border-radius is flat */
+  height: 0;
+}
+
+.blueBoxVisible {
+  height: 3px;
+  border-radius: 2px 2px 0 0;
 }

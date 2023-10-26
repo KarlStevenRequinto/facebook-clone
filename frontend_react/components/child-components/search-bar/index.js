@@ -11,7 +11,7 @@ const SearchBar = () => {
       <input
         type="search"
         placeholder="Search Facebook"
-        spellcheck="false"
+        spellCheck="false"
         className={`${styles.searchInput} ${styles.customPlaceholder}`}
       />
     </div>
