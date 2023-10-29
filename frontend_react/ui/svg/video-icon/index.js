@@ -1,6 +1,7 @@
-const VideoIcon = ({fill,height,width}) => {
+const VideoIcon = ({fill,height,width,stroke}) => {
   return (
     <svg
+      stroke={stroke}
       fill={fill}
       viewBox="0 0 24 24"
       width={width}

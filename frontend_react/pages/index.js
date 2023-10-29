@@ -13,7 +13,7 @@ export default function Home() {
         {/* <h3 style={{ marginTop: 0 }}>Facebook Clone Project</h3> */}
         {/* call your component here */}
         <NavBar />
-        <div>FACEBOOK CLONE</div>
+        <div style={{height:"100px"}}>FACEBOOK CLONE</div>
       </div>
     </div>
   );
