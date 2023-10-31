@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "Questrial";
+  src: url("/static/fonts/Questrial-Regular.ttf");
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  padding: 8px;
+  border-radius: 8px;
+  width: 150px;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.1s ease;
+  cursor: pointer;
+}
+
+.container:hover {
+  background-color: #f2f3f5;
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.iconImage {
+  height: 24px;
+  width: 24px;
+}
+
+.textContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* line-height: 20px; */
+}
+
+.btnText {
+  font-family: "Questrial";
+  font-size: 15px;
+  color: #65676b;
+  line-height: 1.333;
+  position: relative;
+  font-weight: 550;
+}
+
+.btnText::before {
+  content: "";
+  height: 0;
+  display: block;
+  margin-top: -2px;
+}
+.btnText::after {
+  content: "";
+  height: 0;
+  display: block;
+  margin-top: -4px;
+}

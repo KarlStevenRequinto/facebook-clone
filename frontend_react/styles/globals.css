@@ -1,8 +1,17 @@
+@font-face {
+  src: url("/static/fonts/Segoe-UI-Historic.TTF"); /* Primary font */
+  font-family: "Segoe UI Historic", "Questrial"; /* Fallback font */
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
+  width: 100%;
+  height: 100%;
   font-family:
+    "Segoe UI Historic",
+    "Questrial",
     Inter,
     -apple-system,
     BlinkMacSystemFont,

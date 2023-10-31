@@ -1,0 +1,14 @@
+.container {
+  display: inline-block;
+}
+
+.text {
+  font-family: "Segoe UI Historic";
+  color: #65676b;
+  font-size: 17px;
+  line-height: 21px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,28 @@
+.container {
+  padding: 0 8px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  width: 344px; /*NEED TO MAKE THIS ADJUSTABLE*/
+}
+
+.container:hover {
+  background-color: #f0f2f5;
+}
+.iconContainer {
+  height: 52px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 12px;
+}
+.text {
+  font-family: "Questrial";
+  font-size: 15px;
+  color: #050505;
+  font-weight: 600;
+  line-height: 20px;
+}
