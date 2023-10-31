@@ -77,7 +77,6 @@ const NavBar = () => {
 
   const handleNavBtnClick = (index) => {
     setActiveItem(index);
-    console.log(index);
   };
 
   const handleNavBtnMouseEnter = (name) => {

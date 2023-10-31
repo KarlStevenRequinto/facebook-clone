@@ -1,20 +1,12 @@
+import ContentWindow from "../components/main-component/content-window";
 import NavBar from "../components/main-component/navbar";
+import HomePage from "./home";
 
 export default function Home() {
   return (
-    <div style={{ margin: 0, overflow: "hidden" }}>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
-        {/* <h3 style={{ marginTop: 0 }}>Facebook Clone Project</h3> */}
-        {/* call your component here */}
-        <NavBar />
-        <div style={{height:"100px"}}>FACEBOOK CLONE</div>
-      </div>
-    </div>
+    <ContentWindow>
+      <NavBar />
+      <HomePage />
+    </ContentWindow>
   );
 }
