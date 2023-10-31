@@ -1,12 +1,11 @@
-import ContentWindow from "../components/main-component/content-window";
 import NavBar from "../components/main-component/navbar";
 import HomePage from "./home";
 
 export default function Home() {
   return (
-    <ContentWindow>
+    <main>
       <NavBar />
-      <HomePage />
-    </ContentWindow>
+      <div className="contentContainer">CONTENT HERE</div>
+    </main>
   );
 }

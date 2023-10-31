@@ -1,0 +1,14 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+  
+    box-sizing: border-box;
+    background-color: #e4e6eb;
+  }
+  
+  .contentContainer {
+    position: relative;
+    padding-top: 56px;
+    background-color: red;
+  }
+  
