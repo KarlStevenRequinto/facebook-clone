@@ -11,9 +11,10 @@ import MessengerIcon from "../../../ui/svg/messenger-icon";
 import styles from "./styles.module.css";
 import ImageContainer from "../../child-components/image-container";
 import { useState } from "react";
+import { useRouter } from "next/router";
 import Tooltip from "../../../ui/tooltip";
 
-const NavBar = () => {
+const NavBar = ({ onNavBtnClick }) => {
   const [activeItem, setActiveItem] = useState(null);
   const [isNavBtnHovered, setIsNavBtnHovered] = useState(null);
   const navCenterIcons = [
@@ -87,6 +88,12 @@ const NavBar = () => {
     setIsNavBtnHovered(null);
   };
 
+  const router = useRouter();
+
+  // const handleNavigation = (pageName) => {
+  //   router.push(`/${pageName.toLowerCase()}`);
+  // };
+
   return (
     <div className={styles.container}>
       <div className={styles.logoSearchBarContainer}>
@@ -99,7 +106,6 @@ const NavBar = () => {
         <SearchBar />
       </div>
 
-      {/* container of list of buttons */}
       <div className={styles.btnListContainer}>
         <ul className={styles.listContainer}>
           {navCenterIcons.map((item, index) => (
@@ -113,7 +119,11 @@ const NavBar = () => {
                 className={`${styles.listItem} ${
                   isNavBtnHovered ? styles.listItemHovered : ""
                 }`}
-                onClick={() => handleNavBtnClick(index)}
+                onClick={() => {
+                  onNavBtnClick(item.label);
+                  // handleNavigation(item.label)
+                  handleNavBtnClick(index);
+                }}
               >
                 <span className={styles.icon}>{item.component}</span>
               </li>

@@ -1,5 +1,14 @@
+import NavBar from "../../components/main-component/navbar";
+import usePageNavigation from "../../hooks/page-navigation";
 const GroupsPage = () => {
-  return <div>Groups Page</div>;
+  const { activeComponent, navigateToPage } = usePageNavigation();
+
+  return (
+    <div>
+      <NavBar onNavBtnClick={navigateToPage} />
+      <main className="contentContainer">GroupsPage Content</main>
+    </div>
+  );
 };
 
 export default GroupsPage;
