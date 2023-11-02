@@ -13,12 +13,25 @@
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
   z-index: 100; /* To layer it above other content */
 }
-
-.logoSearchBarContainer {
+.centerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rightContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+.leftContainer {
   height: 100%;
   display: flex;
+  justify-content: flex-start;
   flex-direction: row;
   padding: 0;
+}
+
+.navItem {
+  flex: 1;
 }
 .listContainer {
   position: relative;

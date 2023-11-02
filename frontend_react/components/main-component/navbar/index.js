@@ -90,7 +90,7 @@ const NavBar = () => {
 
   return (
     <nav className={styles.container}>
-      <div className={styles.logoSearchBarContainer}>
+      <div className={`${styles.leftContainer} ${styles.navItem}`}>
         <FacebookIcon
           width={40}
           height={40}
@@ -100,7 +100,7 @@ const NavBar = () => {
         <SearchBar />
       </div>
 
-      <div className={styles.btnListContainer}>
+      <div className={`${styles.centerContainer} ${styles.navItem}`}>
         <ul className={styles.listContainer}>
           {navCenterIcons.map((item, index) => (
             <Link
@@ -145,8 +145,8 @@ const NavBar = () => {
           ))}
         </ul>
       </div>
-      {/* container of list of icons */}
-      <div>
+
+      <div className={`${styles.rightContainer} ${styles.navItem}`}>
         <ul className={styles.listContainer}>
           {navRightSideIcons.map((item, index) => (
             <li
