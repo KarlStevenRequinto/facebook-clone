@@ -1,3 +1,4 @@
+import { useState } from "react";
 import FacebookIcon from "../../../ui/svg/facebook-icon";
 import HomeIcon from "../../../ui/svg/home-icon";
 import VideoIcon from "../../../ui/svg/video-icon";
@@ -10,11 +11,10 @@ import BellIcon from "../../../ui/svg/bell-icon";
 import MessengerIcon from "../../../ui/svg/messenger-icon";
 import styles from "./styles.module.css";
 import ImageContainer from "../../child-components/image-container";
-import { useState } from "react";
-import { useRouter } from "next/router";
 import Tooltip from "../../../ui/tooltip";
+import Link from "next/link";
 
-const NavBar = ({ onNavBtnClick }) => {
+const NavBar = () => {
   const [activeItem, setActiveItem] = useState(null);
   const [isNavBtnHovered, setIsNavBtnHovered] = useState(null);
   const navCenterIcons = [
@@ -88,14 +88,8 @@ const NavBar = ({ onNavBtnClick }) => {
     setIsNavBtnHovered(null);
   };
 
-  const router = useRouter();
-
-  // const handleNavigation = (pageName) => {
-  //   router.push(`/${pageName.toLowerCase()}`);
-  // };
-
   return (
-    <div className={styles.container}>
+    <nav className={styles.container}>
       <div className={styles.logoSearchBarContainer}>
         <FacebookIcon
           width={40}
@@ -109,38 +103,45 @@ const NavBar = ({ onNavBtnClick }) => {
       <div className={styles.btnListContainer}>
         <ul className={styles.listContainer}>
           {navCenterIcons.map((item, index) => (
-            <div
+            <Link
               key={index}
-              className={styles.itemContainer}
-              onMouseEnter={() => handleNavBtnMouseEnter(item.label)}
-              onMouseLeave={() => handleNavBtnMouseLeave()}
+              href={`/${
+                item.label === "Video"
+                  ? "watch"
+                  : item.label === "Home"
+                  ? ""
+                  : item.label.toLowerCase()
+              }`}
             >
-              <li
-                className={`${styles.listItem} ${
-                  isNavBtnHovered ? styles.listItemHovered : ""
-                }`}
-                onClick={() => {
-                  onNavBtnClick(item.label);
-                  // handleNavigation(item.label)
-                  handleNavBtnClick(index);
-                }}
-              >
-                <span className={styles.icon}>{item.component}</span>
-              </li>
               <div
-                className={`${styles.blueBox} ${
-                  activeItem === index ? styles.blueBoxVisible : ""
-                }`}
-              ></div>
-              <div
-                className={styles.tooltipContainer}
-                style={{
-                  opacity: isNavBtnHovered === item.label ? 1 : 0,
-                }}
+                key={index}
+                className={styles.itemContainer}
+                onClick={() => handleNavBtnClick(index)}
+                onMouseEnter={() => handleNavBtnMouseEnter(item.label)}
+                onMouseLeave={() => handleNavBtnMouseLeave()}
               >
-                <Tooltip text={item.label} />
+                <li
+                  className={`${styles.listItem} ${
+                    isNavBtnHovered ? styles.listItemHovered : ""
+                  }`}
+                >
+                  <span className={styles.icon}>{item.component}</span>
+                </li>
+                <div
+                  className={`${styles.blueBox} ${
+                    activeItem === index ? styles.blueBoxVisible : ""
+                  }`}
+                ></div>
+                <div
+                  className={styles.tooltipContainer}
+                  style={{
+                    opacity: isNavBtnHovered === item.label ? 1 : 0,
+                  }}
+                >
+                  <Tooltip text={item.label} />
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </ul>
       </div>
@@ -181,7 +182,7 @@ const NavBar = ({ onNavBtnClick }) => {
           </li>
         </ul>
       </div>
-    </div>
+    </nav>
   );
 };
 
