@@ -42,7 +42,6 @@ img {
 }
 
 .container {
-  background-color: green;
   margin: 0;
   overflow: hidden;
   display: flex;
@@ -52,6 +51,6 @@ img {
 }
 
 .contentContainer {
-  padding-top: 56PX;
-  background-color: blue;
+  padding-top: 56px;
+  height: 100vh;
 }

@@ -1,8 +1,15 @@
 import NavBar from "../../components/main-component/navbar";
+import usePageNavigation from "../../hooks/page-navigation";
 import styles from "./styles.module.css";
 
 const HomePage = () => {
-  return <main className={styles.container}>HOMEPAGE CONTENT</main>;
+  const { navigateToPage } = usePageNavigation();
+  return (
+    <div>
+      <NavBar onNavBtnClick={navigateToPage} />
+      <main className="contentContainer">HomePage Content</main>
+    </div>
+  );
 };
 
 export default HomePage;

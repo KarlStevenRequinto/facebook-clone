@@ -19,7 +19,6 @@
   display: flex;
   flex-direction: row;
   padding: 0;
-  /* background-color: green; */
 }
 .listContainer {
   position: relative;
@@ -27,14 +26,12 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  /* background-color: skyblue; */
   list-style: none;
   height: 56px;
   margin: 0;
   padding: 0;
 }
 .itemContainer {
-  /* background-color: yellow; */
   display: flex;
   flex-direction: column;
   align-items: center;

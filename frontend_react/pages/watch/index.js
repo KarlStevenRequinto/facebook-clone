@@ -1,12 +1,13 @@
 import NavBar from "../../components/main-component/navbar";
-import styles from "./styles.module.css";
+import usePageNavigation from "../../hooks/page-navigation";
 
 const WatchPage = () => {
+  const { navigateToPage } = usePageNavigation();
   return (
-    <main className={styles.container}>
-      <NavBar />
-      <div className={styles.contentContainer}>WATCHPAGE CONTENT</div>
-    </main>
+    <div>
+      <NavBar onNavBtnClick={navigateToPage}/>
+      <main className="contentContainer">WatchPage Content</main>
+    </div>
   );
 };
 
