@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
         <title>Facebook Clone</title>
       </Head>
       <NavBar />
-      <main>{children}</main>
+      <main className="layout">{children}</main>
     </>
   );
 };
