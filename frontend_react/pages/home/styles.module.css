@@ -1,5 +1,15 @@
-.container {
-  box-sizing: border-box;
-  background-color: blue;
+.sideBar {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
 }
-
+.centerCol {
+  /* temporary borders */
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 2.5;
+}
