@@ -7,7 +7,11 @@ const HomePage = () => {
     <main className="contentContainer">
       <div className={styles.sideBar}>
         <div className={styles.sideNavBar}>
-          <RowPressable />
+          <RowPressable text="Lerd Robott"/>
+          <RowPressable text="Lerd Robott"/>
+          <RowPressable text="Lerd Robott"/>
+          <RowPressable text="Lerd Robott"/>
+          <RowPressable text="Lerd Robott"/>
         </div>
         <h2>My Shortcuts Container</h2>
       </div>
