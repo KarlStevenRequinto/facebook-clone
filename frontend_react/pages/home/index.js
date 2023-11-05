@@ -1,13 +1,17 @@
 import RowPressable from "../../components/child-components/row-pressable";
 import SubTitleHeader from "../../components/child-components/sub-title-headers";
 import styles from "./styles.module.css";
+import { page_list } from "../../dummy-data";
 
 const HomePage = () => {
   return (
     <main className="contentContainer">
       <div className={styles.sideBar}>
         <div className={styles.sideNavBar}>
-          <RowPressable text="Lerd Robott" />
+          {page_list.map((page, index) => (
+            <RowPressable text={page.name} iconComponent={page.icon} key={index}/>
+          ))}
+          {/* <RowPressable text="Lerd Robott" /> */}
         </div>
         <h2>My Shortcuts Container</h2>
       </div>
