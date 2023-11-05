@@ -1,10 +1,14 @@
+import RowPressable from "../../components/child-components/row-pressable";
+import SubTitleHeader from "../../components/child-components/sub-title-headers";
 import styles from "./styles.module.css";
 
 const HomePage = () => {
   return (
     <main className="contentContainer">
       <div className={styles.sideBar}>
-        <h2>My Pages Container</h2>
+        <div className={styles.sideNavBar}>
+          <RowPressable text="Lerd Robott" />
+        </div>
         <h2>My Shortcuts Container</h2>
       </div>
       <div className={styles.centerCol}>

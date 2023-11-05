@@ -170,7 +170,7 @@ const NavBar = () => {
             onMouseEnter={() => handleNavBtnMouseEnter("Account")}
             onMouseLeave={() => handleNavBtnMouseLeave()}
           >
-            <ImageContainer isOnline={true} />
+            <ImageContainer isOnline={true} width={40} height={40}/>
             <div
               className={styles.tooltipContainer}
               style={{

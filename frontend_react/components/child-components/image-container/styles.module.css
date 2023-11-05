@@ -1,8 +1,7 @@
 .container {
   position: relative;
-  height: 40px;
-  width: 40px;
   display: flex;
+  margin-right: 12px;
 }
 
 .iconContainer {
@@ -16,11 +15,10 @@
   height: 100%;
   width: 100%;
   display: flex;
-  justify-content: center; /* Center the image horizontally */
-  align-items: center; /* Center the image vertically */
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
-  overflow: hidden; /* Ensure the border stays within the circle */
-  /*TO-DO: MAKE THE BORDER/BACKGROUND DYNAMIC, IF NOT USED FOR PROFILE PIC, THERE SHOULD BE NO BORDER EFFECT*/
+  overflow: hidden;
   background-color: rgba(243, 227, 227, 0.575);
 }
 
@@ -40,7 +38,7 @@
   right: 0px;
   background-color: white;
   border-radius: 50%;
-  padding: 1px; /* Add padding for the outer circle */
+  padding: 1px;
 }
 
 .onlineDot {
@@ -48,6 +46,6 @@
   height: 8px;
   background-color: #31a24c;
   border-radius: 50%;
-  display: block; /* Make the span a block element */
-  margin: auto; /* Center the span horizontally and vertically */
+  display: block;
+  margin: auto;
 }

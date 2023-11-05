@@ -13,3 +13,6 @@
   align-items: center;
   flex: 2.5;
 }
+.sideNavBar {
+  margin-top: 16px;
+}
