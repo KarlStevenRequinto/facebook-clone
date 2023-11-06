@@ -101,6 +101,7 @@ body {
   --fds-yellow-20: #ffba00;
   --accent: #0866ff;
   --always-white: #ffffff;
+  --primary-icon: #050505;
   --always-black: black;
   --always-dark-gradient: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
   --always-gray-40: #65676b;
@@ -151,7 +152,7 @@ img {
 }
 
 .contentContainer {
-  background-color: transparent;
+  background-color: var(--always-gray-95);
   display: flex;
   padding-top: 56px;
 }

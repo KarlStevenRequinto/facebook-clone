@@ -7,9 +7,8 @@ const AdsManagerIcon = ({ iconPath }) => {
         draggable="false"
         height="36"
         width="36"
-        alt=""
-        class="xz74otr"
-        referrerpolicy="origin-when-cross-origin"
+        alt="AdsManagerIcon"
+        referrerPolicy="origin-when-cross-origin"
         src={iconPath}
       ></img>
     </div>

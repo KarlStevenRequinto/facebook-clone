@@ -8,7 +8,7 @@ const FeedsIcon = ({ iconPath }) => {
         height="36px"
         width="36px"
         alt="FeedsIcon"
-        referrerpolicy="origin-when-cross-origin"
+        referrerPolicy="origin-when-cross-origin"
         src={iconPath}
       />
     </div>

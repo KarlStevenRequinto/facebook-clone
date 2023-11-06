@@ -1,13 +1,13 @@
 import React from "react";
 
-const AdsCenterIcon = ({ iconPath }) => {
+const RecentAdIcon = ({iconPath}) => {
   return (
     <div>
       <img
         draggable="false"
         height="36"
         width="36"
-        alt="AdsCenterIcon"
+        alt="RecentAdIcon"
         referrerPolicy="origin-when-cross-origin"
         src={iconPath}
       ></img>
@@ -15,4 +15,4 @@ const AdsCenterIcon = ({ iconPath }) => {
   );
 };
 
-export default AdsCenterIcon;
+export default RecentAdIcon;
