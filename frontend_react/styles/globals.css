@@ -155,6 +155,9 @@ img {
   background-color: var(--always-gray-95);
   display: flex;
   padding-top: 56px;
+  height: 100vh;
+  /* max-height: 100vh;
+  min-height: 100vh; */
 }
 .layout {
   background-color: var(--always-gray-95);

@@ -8,7 +8,7 @@ const OrdersPaymentsIcon = ({ iconPath }) => {
         height="36"
         width="36"
         alt="OrdersPaymentsIcon"
-        referrerpolicy="origin-when-cross-origin"
+        referrerPolicy="origin-when-cross-origin"
         src={iconPath}
       />
     </div>

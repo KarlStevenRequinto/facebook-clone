@@ -8,7 +8,7 @@ const GamingVideoIcon = ({ iconPath }) => {
         height="36"
         width="36"
         alt="GamingVideoIcon"
-        referrerpolicy="origin-when-cross-origin"
+        referrerPolicy="origin-when-cross-origin"
         src={iconPath}
       ></img>
     </div>
