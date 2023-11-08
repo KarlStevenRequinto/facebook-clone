@@ -3,7 +3,8 @@
   top: 0; /* Stick to the top of the viewport */
   left: 0;
   right: 0;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
+  background-color: red;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

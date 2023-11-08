@@ -1,7 +1,6 @@
 .container {
   position: relative;
   display: flex;
-  margin-right: 12px;
 }
 
 .iconContainer {

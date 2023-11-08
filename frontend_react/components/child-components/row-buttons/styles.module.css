@@ -10,8 +10,13 @@
 }
 
 .container:hover {
-  background-color: #f0f2f5;
+  background-color: var(--fds-black-alpha-05);
 }
+
+.container:hover .iconInnerContainer {
+  background-color: var(--fds-black-alpha-10);
+}
+
 .iconContainer {
   height: 52px;
   display: flex;
@@ -19,10 +24,19 @@
   align-items: center;
   margin-right: 12px;
 }
+.iconInnerContainer {
+  background-color: var(--disabled-background);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .text {
-  font-family: "Questrial";
+  font-family: "Segoe UI Historic";
   font-size: 15px;
-  color: #050505;
+  color: var(--primary-icon);
   font-weight: 600;
   line-height: 20px;
 }

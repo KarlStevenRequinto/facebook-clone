@@ -1,11 +1,11 @@
 import ImageContainer from "../image-container";
 import styles from "./styles.module.css";
 
-const RowPressable = ({ text }) => {
+const RowPressable = ({ iconComponent, text }) => {
   return (
     <div className={styles.container}>
       <div className={styles.innerContainer}>
-        <ImageContainer width={36} height={36}/>
+        <div className={styles.iconContainer}>{iconComponent}</div>
         <div>
           <span className={styles.text}>{text}</span>
         </div>
