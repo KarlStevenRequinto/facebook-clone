@@ -1,5 +1,9 @@
 const GroupsPage = () => {
-  return <div>Groups Page</div>;
+  return (
+    <div>
+      <main className="contentContainer">GroupsPage Content</main>
+    </div>
+  );
 };
 
 export default GroupsPage;

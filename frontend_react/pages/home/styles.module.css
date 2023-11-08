@@ -1,5 +1,43 @@
-.container {
+.sideBar {
+  background-color: var(--always-gray-95);
+  /* background-color: skyblue; */
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   width: 100%;
-  height: 100%;
-  box-sizing: border-box;
+  max-height: 100vh;
+  overflow-y: auto;
+  min-width: 400px;
+}
+.centerCol {
+  /* temporary borders */
+  border-right: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 2.5;
+}
+.sideNavBar {
+  margin-top: 16px;
+}
+.sideBar::-webkit-scrollbar {
+  width: 16px;
+}
+
+.sideBar::-webkit-scrollbar-thumb {
+  background-color: var(--fds-black-alpha-20);
+  border: 4px solid transparent;
+  border-radius: 9px;
+  background-clip: content-box;
+}
+
+.sideBar::-webkit-slider-thumb {
+  width: 6px !important;
+}
+
+.sideBar::-webkit-scrollbar-track {
+  background-color: var(--fds-black-alpha-05);
+}
+.rowBtnContainer {
+  margin: 0 8px;
 }

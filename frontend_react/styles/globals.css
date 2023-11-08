@@ -9,6 +9,7 @@ body {
   margin: 0;
   width: 100%;
   height: 100%;
+  background-color: var(--disabled-background);
   font-family:
     "Segoe UI Historic",
     "Questrial",
@@ -26,6 +27,107 @@ body {
     sans-serif;
 }
 
+:root {
+  --fds-black: #000000;
+  --fds-black-alpha-05: rgba(0, 0, 0, 0.05);
+  --fds-black-alpha-10: rgba(0, 0, 0, 0.1);
+  --fds-black-alpha-15: rgba(0, 0, 0, 0.15);
+  --fds-black-alpha-20: rgba(0, 0, 0, 0.2);
+  --fds-black-alpha-30: rgba(0, 0, 0, 0.3);
+  --fds-black-alpha-40: rgba(0, 0, 0, 0.4);
+  --fds-black-alpha-50: rgba(0, 0, 0, 0.5);
+  --fds-black-alpha-60: rgba(0, 0, 0, 0.6);
+  --fds-black-alpha-80: rgba(0, 0, 0, 0.8);
+  --fds-blue-05: #ecf3ff;
+  --fds-blue-30: #aac9ff;
+  --fds-blue-40: #77a7ff;
+  --fds-blue-60: #1877f2;
+  --fds-blue-70: #2851a3;
+  --fds-blue-80: #1d3c78;
+  --fds-button-text: #444950;
+  --fds-dark-mode-gray-35: #cccccc;
+  --fds-dark-mode-gray-50: #828282;
+  --fds-dark-mode-gray-70: #4a4a4a;
+  --fds-dark-mode-gray-80: #373737;
+  --fds-dark-mode-gray-90: #282828;
+  --fds-dark-mode-gray-100: #1c1c1c;
+  --fds-gray-00: #f5f6f7;
+  --fds-gray-05: #f2f3f5; /*comment-background*/
+  --fds-gray-10: #ebedf0;
+  --fds-gray-20: #dadde1;
+  --fds-gray-25: #ccd0d5;
+  --fds-gray-30: #bec3c9;
+  --fds-gray-45: #8d949e;
+  --fds-gray-70: #606770;
+  --fds-gray-80: #444950;
+  --fds-gray-90: #303338;
+  --fds-gray-100: #1c1e21; /*primary-icon, primary-text*/
+  --fds-green-55: #00a400;
+  --fds-highlight: #3578e5;
+  --fds-red-55: #fa383e;
+  --fds-soft: cubic-bezier(0.08, 0.52, 0.52, 1);
+  --fds-spectrum-aluminum-tint-70: #e4f0f6;
+  --fds-spectrum-blue-gray-tint-70: #cfd1d5;
+  --fds-spectrum-cherry: #f35369;
+  --fds-spectrum-cherry-tint-70: #fbccd2;
+  --fds-spectrum-grape-tint-70: #ddd5f0;
+  --fds-spectrum-grape-tint-90: #f4f1fa;
+  --fds-spectrum-lemon-dark-1: #f5c33b;
+  --fds-spectrum-lemon-tint-70: #fef2d1;
+  --fds-spectrum-lime: #a3ce71;
+  --fds-spectrum-lime-tint-70: #e4f0d5;
+  --fds-spectrum-orange-tint-70: #fcdec5;
+  --fds-spectrum-orange-tint-90: #fef4ec;
+  --fds-spectrum-seafoam-tint-70: #caeef9;
+  --fds-spectrum-slate-dark-2: #89a1ac;
+  --fds-spectrum-slate-tint-70: #eaeff2;
+  --fds-spectrum-teal: #6bcebb;
+  --fds-spectrum-teal-dark-1: #4dbba6;
+  --fds-spectrum-teal-dark-2: #31a38d;
+  --fds-spectrum-teal-tint-70: #d2f0ea;
+  --fds-spectrum-teal-tint-90: #f0faf8;
+  --fds-spectrum-tomato: #fb724b;
+  --fds-spectrum-tomato-tint-30: #f38e7b;
+  --fds-spectrum-tomato-tint-90: #fdefed;
+  --fds-strong: cubic-bezier(0.12, 0.8, 0.32, 1);
+  --fds-white-alpha-05: rgba(255, 255, 255, 0.05);
+  --fds-white-alpha-10: rgba(255, 255, 255, 0.1);
+  --fds-white-alpha-20: rgba(255, 255, 255, 0.2);
+  --fds-white-alpha-30: rgba(255, 255, 255, 0.3);
+  --fds-white-alpha-40: rgba(255, 255, 255, 0.4);
+  --fds-white-alpha-50: rgba(255, 255, 255, 0.5);
+  --fds-white-alpha-60: rgba(255, 255, 255, 0.6);
+  --fds-white-alpha-80: rgba(255, 255, 255, 0.8);
+  --fds-yellow-20: #ffba00;
+  --accent: #0866ff;
+  --always-white: #ffffff;
+  --primary-icon: #050505;
+  --always-black: black;
+  --always-dark-gradient: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+  --always-gray-40: #65676b;
+  --always-gray-75: #bcc0c4; /*disabled icon/text*/
+  --always-gray-95: #f0f2f5; /*comment background*/
+  --base-cherry: #f3425f;
+  --base-grape: #9360f7;
+  --base-lemon: #f7b928;
+  --base-lime: #45bd62;
+  --base-pink: #ff66bf;
+  --base-seafoam: #54c7ec;
+  --base-teal: #2abba7;
+  --base-tomato: #fb724b;
+  --text-badge-info-background: hsl(214, 89%, 52%);
+  --text-badge-success-background: #31a24c;
+  --text-badge-attention-background: hsl(40, 89%, 52%);
+  --text-badge-critical-background: #e41e3f;
+  --blue-link: #0064d1;
+  --border-focused: #65676b;
+  --card-background-flat: #f7f8fa;
+  --comment-footer-background: #f6f9fa;
+  --dataviz-primary-1: rgb(48, 200, 180);
+  --disabled-background: #e4e6eb;
+  --divider: #ced0d4;
+  --fb-wordmark: #0866ff;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -38,4 +140,26 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.container {
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.contentContainer {
+  background-color: var(--always-gray-95);
+  display: flex;
+  padding-top: 56px;
+  height: 100vh;
+  /* max-height: 100vh;
+  min-height: 100vh; */
+}
+.layout {
+  background-color: var(--always-gray-95);
+  height: 100vh;
 }

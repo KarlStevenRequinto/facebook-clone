@@ -1,6 +1,6 @@
 import MessengerIcon from "../../../ui/svg/messenger-icon";
 import styles from "./styles.module.css";
-const ImageContainer = ({ isOnline = true, isForIcon = false }) => {
+const ImageContainer = ({ isOnline = true, isForIcon = false,width,height }) => {
   const imagePath = "/static/images/profile-picture.jpg"; //TO-DO make image a props
   const Icon = ({ width, height }) => {
     return (
@@ -20,6 +20,7 @@ const ImageContainer = ({ isOnline = true, isForIcon = false }) => {
             src={imagePath}
             alt="Profile Picture"
             className={styles.profileImage}
+            style={{width,height}}
           />
         )}
       </div>

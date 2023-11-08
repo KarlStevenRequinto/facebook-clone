@@ -1,5 +1,9 @@
 const MarketplacePage = () => {
-  return <div>Marketplace Page</div>;
+  return (
+    <div>
+      <main className="contentContainer">MarketplacePage Content</main>
+    </div>
+  );
 };
 
 export default MarketplacePage;

@@ -1,5 +1,9 @@
 const GamingPage = () => {
-  return <div>Gaming Page</div>;
+  return (
+    <div>
+      <main className="contentContainer">GamingPage Content</main>
+    </div>
+  );
 };
 
 export default GamingPage;

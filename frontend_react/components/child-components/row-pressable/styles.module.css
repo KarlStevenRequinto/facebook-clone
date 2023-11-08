@@ -1,0 +1,34 @@
+.container {
+  padding: 0 8px;
+  width: 360px;
+  height: 52px;
+}
+.innerContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 8px;
+  border-radius: 8px;
+}
+.iconContainer {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 12px;
+}
+.innerContainer:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.text {
+  font-family: "Segoe UI Historic";
+  font-size: 15px;
+  font-weight: 600;
+  color: #050505;
+  line-height: 1.3333;
+  letter-spacing: 0.2px;
+}

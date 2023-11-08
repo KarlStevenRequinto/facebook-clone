@@ -1,3 +1,4 @@
+import { useState } from "react";
 import FacebookIcon from "../../../ui/svg/facebook-icon";
 import HomeIcon from "../../../ui/svg/home-icon";
 import VideoIcon from "../../../ui/svg/video-icon";
@@ -10,8 +11,8 @@ import BellIcon from "../../../ui/svg/bell-icon";
 import MessengerIcon from "../../../ui/svg/messenger-icon";
 import styles from "./styles.module.css";
 import ImageContainer from "../../child-components/image-container";
-import { useState } from "react";
 import Tooltip from "../../../ui/tooltip";
+import Link from "next/link";
 
 const NavBar = () => {
   const [activeItem, setActiveItem] = useState(null);
@@ -88,8 +89,8 @@ const NavBar = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.logoSearchBarContainer}>
+    <nav className={styles.container}>
+      <div className={`${styles.leftContainer} ${styles.navItem}`}>
         <FacebookIcon
           width={40}
           height={40}
@@ -99,43 +100,53 @@ const NavBar = () => {
         <SearchBar />
       </div>
 
-      {/* container of list of buttons */}
-      <div className={styles.btnListContainer}>
+      <div className={`${styles.centerContainer} ${styles.navItem}`}>
         <ul className={styles.listContainer}>
           {navCenterIcons.map((item, index) => (
-            <div
+            <Link
               key={index}
-              className={styles.itemContainer}
-              onMouseEnter={() => handleNavBtnMouseEnter(item.label)}
-              onMouseLeave={() => handleNavBtnMouseLeave()}
+              href={`/${
+                item.label === "Video"
+                  ? "watch"
+                  : item.label === "Home"
+                  ? ""
+                  : item.label.toLowerCase()
+              }`}
             >
-              <li
-                className={`${styles.listItem} ${
-                  isNavBtnHovered ? styles.listItemHovered : ""
-                }`}
+              <div
+                key={index}
+                className={styles.itemContainer}
                 onClick={() => handleNavBtnClick(index)}
+                onMouseEnter={() => handleNavBtnMouseEnter(item.label)}
+                onMouseLeave={() => handleNavBtnMouseLeave()}
               >
-                <span className={styles.icon}>{item.component}</span>
-              </li>
-              <div
-                className={`${styles.blueBox} ${
-                  activeItem === index ? styles.blueBoxVisible : ""
-                }`}
-              ></div>
-              <div
-                className={styles.tooltipContainer}
-                style={{
-                  opacity: isNavBtnHovered === item.label ? 1 : 0,
-                }}
-              >
-                <Tooltip text={item.label} />
+                <li
+                  className={`${styles.listItem} ${
+                    isNavBtnHovered ? styles.listItemHovered : ""
+                  }`}
+                >
+                  <span className={styles.icon}>{item.component}</span>
+                </li>
+                <div
+                  className={`${styles.blueBox} ${
+                    activeItem === index ? styles.blueBoxVisible : ""
+                  }`}
+                ></div>
+                <div
+                  className={styles.tooltipContainer}
+                  style={{
+                    opacity: isNavBtnHovered === item.label ? 1 : 0,
+                  }}
+                >
+                  <Tooltip text={item.label} />
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </ul>
       </div>
-      {/* container of list of icons */}
-      <div>
+
+      <div className={`${styles.rightContainer} ${styles.navItem}`}>
         <ul className={styles.listContainer}>
           {navRightSideIcons.map((item, index) => (
             <li
@@ -159,7 +170,7 @@ const NavBar = () => {
             onMouseEnter={() => handleNavBtnMouseEnter("Account")}
             onMouseLeave={() => handleNavBtnMouseLeave()}
           >
-            <ImageContainer isOnline={true} />
+            <ImageContainer isOnline={true} width={40} height={40}/>
             <div
               className={styles.tooltipContainer}
               style={{
@@ -171,7 +182,7 @@ const NavBar = () => {
           </li>
         </ul>
       </div>
-    </div>
+    </nav>
   );
 };
 
