@@ -23,13 +23,7 @@ const HomePage = () => {
             .map((page, index) => (
               <Link
                 key={index}
-                href={
-                  page.name.toLowerCase().replace(/\s/g, "") === "video"
-                    ? "/watch"
-                    : page.name.toLowerCase().replace(/\s/g, "") === "adcenter"
-                    ? "/ad_center"
-                    : `/${page.name.toLowerCase().replace(/\s/g, "")}`
-                }
+                href={`/${page.routeName}`}
                 style={{ textDecoration: "none" }}
               >
                 <RowPressable text={page.name} iconComponent={page.icon} />

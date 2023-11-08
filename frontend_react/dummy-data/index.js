@@ -1,4 +1,3 @@
-import VideoIcon from "../ui/svg/video-icon";
 import ImageContainer from "../components/child-components/image-container";
 import FriendsIcon from "../ui/modern-icons/friends-icon";
 import VideoPageIcon from "../ui/modern-icons/modern-video-icon";
@@ -43,76 +42,117 @@ const page_list = [
   {
     name: "Lerd Robott",
     icon: <ImageContainer width={36} height={36} isOnline={false} />,
+    routeName: "/lerdrobott",
   },
-  { name: "Friends", icon: <FriendsIcon backgroundImagePath={ICON_PATH_A} /> },
-  { name: "Video", icon: <VideoPageIcon backgroundImagePath={ICON_PATH_A} /> },
+  {
+    name: "Friends",
+    icon: <FriendsIcon backgroundImagePath={ICON_PATH_A} />,
+    routeName: "/friends",
+  },
+  {
+    name: "Video",
+    icon: <VideoPageIcon backgroundImagePath={ICON_PATH_A} />,
+    routeName: "/watch",
+  },
   {
     name: "Groups",
     icon: <GroupsPageIcon backgroundImagePath={ICON_PATH_A} />,
+    routeName: "/groups",
   },
   {
     name: "Marketplace",
     icon: <MarketplacePageIcon backgroundImagePath={ICON_PATH_A} />,
+    routeName: "/marketplace",
   },
   {
     name: "Ad Center",
     icon: <AdsCenterIcon iconPath={ICON_PATH_ADS_CENTER} />,
+    routeName: "/ad_center",
   },
   {
     name: "Ads Manager",
     icon: <AdsManagerIcon iconPath={ICON_PATH_ADS_MANAGER} />,
+    routeName: "/adsmanager",
   },
   {
     name: "Blood Donations",
     icon: <BloodDonationIcon backgroundImagePath={ICON_PATH_B} />,
+    routeName: "/blooddonations",
   },
   {
     name: "Climate Science Center",
     icon: <ClimateScienceCenterIcon iconPath={ICON_PATH_CLIMATE_SCIENCE} />,
+    routeName: "/climatescienceinfo",
   },
-  { name: "Events", icon: <EventsIcon backgroundImagePath={ICON_PATH_C} /> },
-  { name: "Feeds", icon: <FeedsIcon iconPath={ICON_PATH_FEEDS} /> },
+  {
+    name: "Events",
+    icon: <EventsIcon backgroundImagePath={ICON_PATH_C} />,
+    routeName: "/events",
+  },
+  {
+    name: "Feeds",
+    icon: <FeedsIcon iconPath={ICON_PATH_FEEDS} />,
+    routeName: "/feeds",
+  },
   {
     name: "Fundraisers",
     icon: <Fundraisers backgroundImagePath={ICON_PATH_A} />,
+    routeName: "/fundraisers/explore",
   },
   {
     name: "Gaming Video",
     icon: <GamingVideoIcon iconPath={ICON_PATH_GAMING_VIDEO} />,
+    routeName: "/gaming/external",
   },
   {
     name: "Memories",
     icon: <MemoriesIcon backgroundImagePath={ICON_PATH_A} />,
+    routeName: "/memories",
   },
   {
     name: "Messenger",
     icon: <MessengerIcon backgroundImagePath={ICON_PATH_D} />,
+    routeName: "/messages",
   },
   {
     name: "Messenger Kids",
     icon: <MessengerKidsIcon iconPath={ICON_PATH_MESSENGER_KIDS} />,
+    routeName: "/messenger_kids",
   },
   {
     name: "Meta Business Suite",
     icon: <MetaBizSuiteIcon iconPath={ICON_PATH_META_BIZ_SUITE} />,
+    routeName: "/metabusinesssuite",
   },
   {
     name: "Orders and payments",
     icon: <OrdersPaymentsIcon iconPath={ICON_PATH_ORDERS_PAYMENT} />,
+    routeName: "/facebook_pay",
   },
-  { name: "Pages", icon: <PagesIcon backgroundImagePath={ICON_PATH_A} /> },
+  {
+    name: "Pages",
+    icon: <PagesIcon backgroundImagePath={ICON_PATH_A} />,
+    routeName: "/pages",
+  },
   {
     name: "Play Games",
     icon: <PlayGamesIcon backgroundImagePath={ICON_PATH_A} />,
+    routeName: "/gaming",
   },
   {
     name: "Professional dashboard",
     icon: <ProfessionalDashboardIcon iconPath={ICON_PATH_PRO_DASHBOARD} />,
+    routeName: "/lerdrobott/professional_dashboard",
   },
   {
     name: "Recent ad activity",
     icon: <RecentAdIcon iconPath={ICON_PATH_RECENT_AD} />,
+    routeName: "/ads/activity",
   },
-  { name: "Saved", icon: <SavedIcon backgroundImagePath={ICON_PATH_A} /> },
+  {
+    name: "Saved",
+    icon: <SavedIcon backgroundImagePath={ICON_PATH_A} />,
+    routeName: "/saved",
+  },
 ];
 export { page_list };
