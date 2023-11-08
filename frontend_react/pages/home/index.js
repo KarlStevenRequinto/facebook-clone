@@ -5,6 +5,7 @@ import ArrowUpIcon from "../../ui/svg/arrow-up-icon";
 import RowButton from "../../components/child-components/row-buttons";
 import { useState } from "react";
 import ArrowDownIcon from "../../ui/svg/arrow-down-icon";
+import Link from "next/link";
 
 const HomePage = () => {
   const [rowBtnIsToggled, setRowBtnIsToggled] = useState(false);
@@ -20,11 +21,19 @@ const HomePage = () => {
           {page_list
             .slice(0, rowBtnIsToggled ? 6 : page_list.length)
             .map((page, index) => (
-              <RowPressable
-                text={page.name}
-                iconComponent={page.icon}
+              <Link
                 key={index}
-              />
+                href={
+                  page.name.toLowerCase().replace(/\s/g, "") === "video"
+                    ? "/watch"
+                    : page.name.toLowerCase().replace(/\s/g, "") === "adcenter"
+                    ? "/ad_center"
+                    : `/${page.name.toLowerCase().replace(/\s/g, "")}`
+                }
+                style={{ textDecoration: "none" }}
+              >
+                <RowPressable text={page.name} iconComponent={page.icon} />
+              </Link>
             ))}
           <div className={styles.rowBtnContainer}>
             <RowButton
@@ -48,6 +57,7 @@ const HomePage = () => {
             />
           </div>
         </div>
+        <br />
         <h2>My Shortcuts Container</h2>
       </div>
       <div className={styles.centerCol}>
