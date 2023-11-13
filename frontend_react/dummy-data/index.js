@@ -155,4 +155,36 @@ const page_list = [
     routeName: "saved",
   },
 ];
-export { page_list };
+
+const userProfile = {
+  name: "Lerd Robott",
+  nickName: "Kokoy",
+  pages: [
+    {
+      pageName: "Lanky Nation Gaming",
+      pageType: "page",
+      pageImage: "/static/images/pages_images/lkn gaming.jpg",
+    },
+    {
+      pageName: "Lanky Nation Trading",
+      pageType: "page",
+      pageImage: "/static/images/pages_images/lkn trading.jpg",
+    },
+    {
+      pageName: "Start Coding Bacolod",
+      pageType: "page",
+      pageImage: "/static/images/pages_images/start coding bacolod.jpg",
+    },
+    {
+      pageName: "Bacolod House, Condo, Apartment for Rent",
+      pageType: "group",
+      pageImage: "/static/images/pages_images/groups_1.jpg",
+    },
+    {
+      pageName: "EI / UX Designers & Developers",
+      pageType: "group",
+      pageImage: "/static/images/pages_images/groups_2.jpg",
+    },
+  ],
+};
+export { page_list, userProfile };

@@ -51,3 +51,5 @@ const dummy_user = [
     },
   },
 ];
+
+export { dummy_user };
