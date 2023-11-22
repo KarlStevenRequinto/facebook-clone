@@ -1,5 +1,5 @@
 .sideBar {
-  /* background-color: var(--always-gray-95); */
+  background-color: var(--always-gray-95);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -9,7 +9,6 @@
   overflow-x: hidden;
   max-width: 360px;
   min-width: 360px;
-  /* background-color: pink; */
 }
 .centerCol {
   /* temporary borders */
@@ -22,10 +21,6 @@
 
 .sideBarContent {
   flex-grow: 1;
-  /* background-color: yellow; */
-  /* position: absolute;
-  top: 0;
-  left: 0; */
 }
 .pageListContainer {
   position: relative;
@@ -34,9 +29,19 @@
 .sideBar::-webkit-scrollbar {
   width: 16px;
 }
+.sideBar:hover::-webkit-scrollbar-track {
+  display: block;
+}
+
+.sideBar:hover::-webkit-scrollbar-thumb {
+  background-color: var(--fds-black-alpha-20);
+  display: block;
+}
 
 .sideBar::-webkit-scrollbar-thumb {
-  background-color: var(--fds-black-alpha-20);
+  display: none;
+  transition: background-color 1s ease;
+  background-color: transparent;
   border: 4px solid transparent;
   border-radius: 9px;
   background-clip: content-box;
@@ -47,6 +52,7 @@
 }
 
 .sideBar::-webkit-scrollbar-track {
+  display: none;
   background-color: var(--fds-black-alpha-05);
 }
 .rowBtnContainer {
@@ -81,16 +87,10 @@
 
 .shortcutsContainer {
   margin-top: 6px;
-  /* position: relative; */
 }
 .sideBarFooter {
   width: 100%;
-  /* background-color: blue; */
   padding: 16px;
-  /* position: absolute; */
-  /* bottom: 0;
-  left: 0;
-  right: 0; */
   height: 57.25px;
 }
 
