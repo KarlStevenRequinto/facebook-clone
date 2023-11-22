@@ -40,6 +40,9 @@ const ICON_PATH_PRO_DASHBOARD =
 const ICON_PATH_RECENT_AD =
   "https://static.xx.fbcdn.net/rsrc.php/v3/yv/r/x2_LFd7gCqg.png?_nc_eui2=AeHd2IL32x3jJ_rWbQGYPVHoC2aOHagedWgLZo4dqB51aMOejellteh7qZ72G_KwA2i9qiFLePdpvzlvKYBNZ6Qa";
 
+const ICON_PATH_PIZZA =
+  "https://static.xx.fbcdn.net/rsrc.php/v3/yS/r/BRHA-nd2kJR.png?_nc_eui2=AeEpfYvrdAyKhattuzG1WUOU5sMgm-MewI_mwyCb4x7Aj676FWbQRUteM5AFVTiB0U4j-3KOwMQtP81U2cDiSjsG";
+
 export {
   ICON_PATH_A,
   ICON_PATH_B,
@@ -55,4 +58,5 @@ export {
   ICON_PATH_ORDERS_PAYMENT,
   ICON_PATH_PRO_DASHBOARD,
   ICON_PATH_RECENT_AD,
+  ICON_PATH_PIZZA,
 };

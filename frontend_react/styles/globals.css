@@ -149,17 +149,20 @@ img {
   position: relative;
   height: 100%;
   width: 100%;
+  /* background-color: skyblue; */
 }
 
 .contentContainer {
-  background-color: var(--always-gray-95);
+  background-color: var(--always-gray-95); 
+  /* background-color: green; */
   display: flex;
   padding-top: 56px;
   height: 100vh;
-  /* max-height: 100vh;
-  min-height: 100vh; */
+  max-height: 100vh;
 }
 .layout {
   background-color: var(--always-gray-95);
   height: 100vh;
+  max-height: 100vh;
+  /* background-color: orange; */
 }
