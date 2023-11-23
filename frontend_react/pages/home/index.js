@@ -9,7 +9,8 @@ import Link from "next/link";
 import SubTitleHeader from "../../components/child-components/sub-title-headers";
 import ImageContainer from "../../components/child-components/image-container";
 import AdPizza from "../../ui/svg/ad-pizza";
-import { ICON_PATH_PIZZA } from "../../constants";
+import { ICON_PATH_E } from "../../constants";
+import EllipsisIcon from "../../ui/svg/ellipsis-icon";
 
 const HomePage = () => {
   const [rowBtnIsToggled, setRowBtnIsToggled] = useState(true);
@@ -42,6 +43,19 @@ const HomePage = () => {
         onMouseLeave={() => setIsEditHovered(false)}
       >
         {isShortcutsHovered && text}
+      </div>
+    );
+  };
+
+  const EllipsisBtn = () => {
+    return (
+      <div className={styles.ellipsisContainer}>
+        <EllipsisIcon
+          height={16}
+          width={16}
+          filter={"--filter-secondary-icon"}
+          backgroundImagePath={ICON_PATH_E}
+        />
       </div>
     );
   };
@@ -162,7 +176,10 @@ const HomePage = () => {
               <a>Ad Choices</a>
             </li>
             <li style={{ marginLeft: 4 }}>
-              <AdPizza backgroundImagePath={ICON_PATH_PIZZA} />
+              <AdPizza
+                backgroundImagePath={ICON_PATH_E}
+                filter={"--filter-secondary-icon"}
+              />
             </li>
             <li>
               <a>
@@ -186,7 +203,33 @@ const HomePage = () => {
         <h2>My Feed Container</h2>
       </div>
       <div className={styles.sideBar}>
-        <h2>Your Page and profiles Container</h2>
+        <div className={styles.headerContainer}>
+          <SubTitleHeader
+            text="Your Pages and profiles"
+            icon={<EllipsisBtn />}
+          />
+        </div>
+        <div className={styles.shortcutsContainer}>
+          {
+            // Render only the first element from pageShortCuts
+            pageShortCuts.length > 0 && (
+              <Link href={""} style={{ textDecoration: "none" }}>
+                <RowPressable
+                  text={pageShortCuts[0].pageName}
+                  iconComponent={
+                    <ImageContainer
+                      isOnline={false}
+                      imagePath={pageShortCuts[0].pageImage}
+                      width={36}
+                      height={36}
+                      altText={pageShortCuts[0].pageName}
+                    />
+                  }
+                />
+              </Link>
+            )
+          }
+        </div>
         <h2>Birthdays Container</h2>
         <h2>My Contacts Container</h2>
       </div>
