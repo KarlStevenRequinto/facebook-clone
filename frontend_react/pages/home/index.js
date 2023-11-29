@@ -9,8 +9,11 @@ import Link from "next/link";
 import SubTitleHeader from "../../components/child-components/sub-title-headers";
 import ImageContainer from "../../components/child-components/image-container";
 import AdPizza from "../../ui/svg/ad-pizza";
-import { ICON_PATH_E } from "../../constants";
+import { ICON_PATH_E, ICON_PATH_F } from "../../constants";
 import EllipsisIcon from "../../ui/svg/ellipsis-icon";
+import SubRowPressable from "../../components/child-components/sub-row-pressable";
+import SwitchPageIcon from "../../ui/svg/switch-page-icon";
+import MegaPhoneIcon from "../../ui/svg/megaphone-icon";
 
 const HomePage = () => {
   const [rowBtnIsToggled, setRowBtnIsToggled] = useState(true);
@@ -229,7 +232,30 @@ const HomePage = () => {
               </Link>
             )
           }
+          <SubRowPressable
+            icon={
+              <SwitchPageIcon
+                width={20}
+                height={20}
+                backgroundImagePath={ICON_PATH_F}
+                filter={"--filter-secondary-icon"}
+              />
+            }
+            text="Switch into Page"
+          />
+          <SubRowPressable
+            icon={
+              <MegaPhoneIcon
+                width={20}
+                height={20}
+                backgroundImagePath={ICON_PATH_F}
+                filter={"--filter-secondary-icon"}
+              />
+            }
+            text="Create Promotion"
+          />
         </div>
+        <div className={styles.divider}></div>
         <h2>Birthdays Container</h2>
         <h2>My Contacts Container</h2>
       </div>
