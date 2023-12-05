@@ -228,7 +228,7 @@ const HomePage = () => {
         </div>
       </div>
       <div className={styles.centerCol}>
-        <h2>My Days Container</h2>
+        <h2>WILL IT COUNT AS CONTRIBS?</h2>
         <h2>My Post Container</h2>
         <h2>My Feed Container</h2>
       </div>
