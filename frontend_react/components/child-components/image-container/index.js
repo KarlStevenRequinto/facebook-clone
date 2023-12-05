@@ -23,6 +23,7 @@ const ImageContainer = ({
         {isForIcon ? (
           <Icon width={20} height={20} />
         ) : (
+          // "../../../public/static/images/friends_pic/David Bangilan.jpg"
           <img
             src={imagePath}
             alt={altText}

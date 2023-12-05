@@ -11,8 +11,6 @@
   min-width: 360px;
 }
 .centerCol {
-  /* temporary borders */
-  border-right: 1px solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -85,8 +83,13 @@
   padding-left: 15px;
 }
 
-.shortcutsContainer {
+.listsContainer {
   margin-top: 6px;
+}
+.iconContainer {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
 }
 .sideBarFooter {
   width: 100%;
@@ -128,4 +131,18 @@ ul.footerListItems a span {
 }
 .dot {
   padding: 0 4px;
+}
+
+.ellipsisContainer {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.ellipsisContainer:hover {
+  background-color: var(--hover-overlay);
 }

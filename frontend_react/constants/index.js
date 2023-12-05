@@ -10,6 +10,15 @@ const ICON_PATH_C =
 const ICON_PATH_D =
   "https://static.xx.fbcdn.net/rsrc.php/v3/yA/r/02zuqj2uyx9.png?_nc_eui2=AeE5ZNE2O4_fntTTr_OmOsb33Um1MOmB28jdSbUw6YHbyGFfGPegPf9GwZ7gU8jaR63Q8yNPh8PuhsbdxuBci6q_";
 
+const ICON_PATH_E =
+  "https://static.xx.fbcdn.net/rsrc.php/v3/yS/r/BRHA-nd2kJR.png?_nc_eui2=AeEpfYvrdAyKhattuzG1WUOU5sMgm-MewI_mwyCb4x7Aj676FWbQRUteM5AFVTiB0U4j-3KOwMQtP81U2cDiSjsG";
+
+const ICON_PATH_F =
+  "https://static.xx.fbcdn.net/rsrc.php/v3/yo/r/qY9RYyC5Siq.png?_nc_eui2=AeEhgkhf8x6t7gYwqvfFEyIL74PgKXyfh9Lvg-ApfJ-H0ofNuXhmG1gBGcCs5DGCh2kJlxZTFvYI8njAS4EjzKYa";
+
+const ICON_PATH_G =
+  "https://static.xx.fbcdn.net/rsrc.php/v3/yI/r/r3VcVrvPbRU.png?_nc_eui2=AeHEMDw_FC026MXjAWJnnHeDbExZAa-BWVNsTFkBr4FZU9fBHPgQy50KjEyhRh3LXc3cPuIy4VPz5efy3r5vZqWt";
+
 const ICON_PATH_FEEDS =
   "https://static.xx.fbcdn.net/rsrc.php/v3/yb/r/eECk3ceTaHJ.png?_nc_eui2=AeFV8S9W0cm7pgJHF4WCWqvBi9AM8exRZGeL0Azx7FFkZ_o0gEsXcWufbOVNVoBNxIZ1MIKyDltQvDBlqjpgKNKk";
 
@@ -40,14 +49,14 @@ const ICON_PATH_PRO_DASHBOARD =
 const ICON_PATH_RECENT_AD =
   "https://static.xx.fbcdn.net/rsrc.php/v3/yv/r/x2_LFd7gCqg.png?_nc_eui2=AeHd2IL32x3jJ_rWbQGYPVHoC2aOHagedWgLZo4dqB51aMOejellteh7qZ72G_KwA2i9qiFLePdpvzlvKYBNZ6Qa";
 
-const ICON_PATH_PIZZA =
-  "https://static.xx.fbcdn.net/rsrc.php/v3/yS/r/BRHA-nd2kJR.png?_nc_eui2=AeEpfYvrdAyKhattuzG1WUOU5sMgm-MewI_mwyCb4x7Aj676FWbQRUteM5AFVTiB0U4j-3KOwMQtP81U2cDiSjsG";
-
 export {
   ICON_PATH_A,
   ICON_PATH_B,
   ICON_PATH_C,
   ICON_PATH_D,
+  ICON_PATH_E,
+  ICON_PATH_F,
+  ICON_PATH_G,
   ICON_PATH_FEEDS,
   ICON_PATH_ADS_CENTER,
   ICON_PATH_ADS_MANAGER,
@@ -58,5 +67,4 @@ export {
   ICON_PATH_ORDERS_PAYMENT,
   ICON_PATH_PRO_DASHBOARD,
   ICON_PATH_RECENT_AD,
-  ICON_PATH_PIZZA,
 };

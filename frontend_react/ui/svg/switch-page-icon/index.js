@@ -1,17 +1,17 @@
 import React from "react";
 
-const AdPizza = ({ backgroundImagePath,filter }) => {
+const SwitchPageIcon = ({ backgroundImagePath, width, height, filter }) => {
   const iconStyle = {
     backgroundImage: `url(${backgroundImagePath})`,
-    backgroundPosition: "-51px -147px",
+    backgroundPosition: "0px -62px",
     backgroundSize: "auto",
-    width: "12px",
-    height: "12px",
+    width: width,
+    height: height,
     backgroundRepeat: "no-repeat",
     display: "block",
-    filter: `var(${filter})`
+    filter: `var(${filter})`,
   };
   return <span style={iconStyle}></span>;
 };
 
-export default AdPizza;
+export default SwitchPageIcon;

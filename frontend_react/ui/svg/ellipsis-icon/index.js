@@ -1,17 +1,17 @@
 import React from "react";
 
-const AdPizza = ({ backgroundImagePath,filter }) => {
+const EllipsisIcon = ({ width, height, filter,backgroundImagePath }) => {
   const iconStyle = {
     backgroundImage: `url(${backgroundImagePath})`,
-    backgroundPosition: "-51px -147px",
+    backgroundPosition: "-161px -126px",
     backgroundSize: "auto",
-    width: "12px",
-    height: "12px",
+    width: width,
+    height: height,
     backgroundRepeat: "no-repeat",
     display: "block",
-    filter: `var(${filter})`
+    filter: `var(${filter})`,
   };
   return <span style={iconStyle}></span>;
 };
 
-export default AdPizza;
+export default EllipsisIcon;
