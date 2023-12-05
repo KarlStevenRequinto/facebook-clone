@@ -1,0 +1,29 @@
+.container {
+  padding: 8px 0;
+}
+.innerContainer {
+  padding: 0 8px;
+  display: flex;
+  flex-direction: row;
+}
+.outerContainer {
+  padding: 0 8px;
+}
+.iconContainer {
+  height: 55px;
+  width: 48px;
+  min-width: 48px;
+  /* background-color: red; */
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.textContainer {
+  font-family: "Segoe UI Historic";
+  font-size: 15px;
+  color: var(--primary-icon);
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+}

@@ -9,7 +9,6 @@
   overflow-x: hidden;
   max-width: 360px;
   min-width: 360px;
-  background-color: pink;
 }
 .centerCol {
   display: flex;
@@ -82,11 +81,15 @@
 .headerContainer {
   position: relative;
   padding-left: 15px;
-  /* background-color: blue; */
 }
 
-.shortcutsContainer {
+.listsContainer {
   margin-top: 6px;
+}
+.iconContainer {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
 }
 .sideBarFooter {
   width: 100%;

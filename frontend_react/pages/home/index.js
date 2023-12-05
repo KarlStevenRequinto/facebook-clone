@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 import { page_list, userProfile } from "../../dummy-data";
 import ArrowUpIcon from "../../ui/svg/arrow-up-icon";
 import RowButton from "../../components/child-components/row-buttons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ArrowDownIcon from "../../ui/svg/arrow-down-icon";
 import Link from "next/link";
 import SubTitleHeader from "../../components/child-components/sub-title-headers";
@@ -14,14 +14,19 @@ import EllipsisIcon from "../../ui/svg/ellipsis-icon";
 import SubRowPressable from "../../components/child-components/sub-row-pressable";
 import SwitchPageIcon from "../../ui/svg/switch-page-icon";
 import MegaPhoneIcon from "../../ui/svg/megaphone-icon";
+import BirthdayPressable from "../../components/child-components/pressable-birthday";
+import SearchIcon from "../../ui/svg/search-icon";
+import EllipsisBigIcon from "../../ui/svg/ellipsis-big-icon";
 
 const HomePage = () => {
   const [rowBtnIsToggled, setRowBtnIsToggled] = useState(true);
   const [isShortcutsToggled, setIsShortcutsToggled] = useState(true);
   const [isEditHovered, setIsEditHovered] = useState(false);
   const [isShortcutsHovered, setIsShortcutsHovered] = useState(false);
+  const [todayBirthdayFriends, setTodayBirthdayFriends] = useState([]);
   const rowBtnText = rowBtnIsToggled ? "See more" : "See less";
   const pageShortcutsText = isShortcutsToggled ? "See more" : "See less";
+
   const handleRowBtnClick = () => {
     rowBtnIsToggled ? setRowBtnIsToggled(false) : setRowBtnIsToggled(true);
   };
@@ -62,7 +67,28 @@ const HomePage = () => {
       </div>
     );
   };
+
   const pageShortCuts = userProfile.pages;
+  const friends = userProfile.friends;
+  const onlineFriends = friends.filter((friend) => friend.isOnline);
+
+  useEffect(() => {
+    const today = new Date();
+    const todayMonth = today.getMonth() + 1;
+    const todayDay = today.getDate();
+
+    const friends = userProfile.friends;
+    const filteredFriends = friends.filter((friend) => {
+      const friendBirthdayMonth = friend.birthday.getMonth() + 1;
+      const friendBirthdayDay = friend.birthday.getDate();
+
+      return (
+        friendBirthdayMonth === todayMonth && friendBirthdayDay === todayDay
+      );
+    });
+    setTodayBirthdayFriends(filteredFriends);
+  }, []);
+
   return (
     <main className="contentContainer">
       <div className={styles.sideBar}>
@@ -110,10 +136,11 @@ const HomePage = () => {
               <SubTitleHeader
                 text="Your shortcuts"
                 icon={<EditBtn text="Edit" />}
+                dualIcon={false}
               />
             </div>
 
-            <div className={styles.shortcutsContainer}>
+            <div className={styles.listsContainer}>
               {pageShortCuts
                 .slice(0, isShortcutsToggled ? 6 : page_list.length)
                 .map((item, index) => (
@@ -206,16 +233,16 @@ const HomePage = () => {
         <h2>My Feed Container</h2>
       </div>
       <div className={styles.sideBar}>
-        <div className={styles.headerContainer}>
-          <SubTitleHeader
-            text="Your Pages and profiles"
-            icon={<EllipsisBtn />}
-          />
-        </div>
-        <div className={styles.shortcutsContainer}>
-          {
-            // Render only the first element from pageShortCuts
-            pageShortCuts.length > 0 && (
+        <div style={{ paddingTop: 8 }}>
+          <div className={styles.headerContainer}>
+            <SubTitleHeader
+              dualIcon={false}
+              text="Your Pages and profiles"
+              icon={<EllipsisBtn height={16} width={16} />}
+            />
+          </div>
+          <div className={styles.listsContainer}>
+            {pageShortCuts.length > 0 && (
               <Link href={""} style={{ textDecoration: "none" }}>
                 <RowPressable
                   text={pageShortCuts[0].pageName}
@@ -230,34 +257,67 @@ const HomePage = () => {
                   }
                 />
               </Link>
-            )
-          }
-          <SubRowPressable
-            icon={
-              <SwitchPageIcon
-                width={20}
-                height={20}
-                backgroundImagePath={ICON_PATH_F}
-                filter={"--filter-secondary-icon"}
+            )}
+            <SubRowPressable
+              icon={
+                <SwitchPageIcon
+                  width={20}
+                  height={20}
+                  backgroundImagePath={ICON_PATH_F}
+                  filter={"--filter-secondary-icon"}
+                />
+              }
+              text="Switch into Page"
+            />
+            <SubRowPressable
+              icon={
+                <MegaPhoneIcon
+                  width={20}
+                  height={20}
+                  backgroundImagePath={ICON_PATH_F}
+                  filter={"--filter-secondary-icon"}
+                />
+              }
+              text="Create Promotion"
+            />
+          </div>
+          <div className={styles.divider} />
+          <div className={styles.headerContainer}>
+            <SubTitleHeader text="Birthdays" dualIcon={false} />
+          </div>
+          <BirthdayPressable bdayFriends={todayBirthdayFriends} />
+          <div className={styles.divider} />
+          <div>
+            <div className={styles.headerContainer}>
+              <SubTitleHeader
+                text="Contacts"
+                dualIcon={true}
+                iconSecond={
+                  <SearchIcon width={16} height={16} fill={"#65676B"} />
+                }
+                icon={
+                  <EllipsisBigIcon height={20} width={20} fill={"#65676B"} />
+                }
               />
-            }
-            text="Switch into Page"
-          />
-          <SubRowPressable
-            icon={
-              <MegaPhoneIcon
-                width={20}
-                height={20}
-                backgroundImagePath={ICON_PATH_F}
-                filter={"--filter-secondary-icon"}
-              />
-            }
-            text="Create Promotion"
-          />
+            </div>
+            {onlineFriends.map((friend, index) => (
+              <Link key={index} href={""} style={{ textDecoration: "none" }}>
+                <RowPressable
+                  text={friend.fName}
+                  iconComponent={
+                    <ImageContainer
+                      isOnline={friend.isOnline}
+                      imagePath={friend.fImage}
+                      altText={friend.fName}
+                      width={36}
+                      height={36}
+                    />
+                  }
+                />
+              </Link>
+            ))}
+          </div>
         </div>
-        <div className={styles.divider}></div>
-        <h2>Birthdays Container</h2>
-        <h2>My Contacts Container</h2>
       </div>
     </main>
   );
