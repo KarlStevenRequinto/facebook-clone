@@ -228,9 +228,11 @@ const HomePage = () => {
         </div>
       </div>
       <div className={styles.centerCol}>
-        <h2>WILL IT COUNT AS CONTRIBS?</h2>
-        <h2>My Post Container</h2>
-        <h2>My Feed Container</h2>
+        <div className={styles.feedContainer}>
+          <h2>WILL IT COUNT AS CONTRIBS?</h2>
+          <h2>My Post Container</h2>
+          <h2>My Feed Container</h2>
+        </div>
       </div>
       <div className={styles.sideBar}>
         <div style={{ paddingTop: 8 }}>
