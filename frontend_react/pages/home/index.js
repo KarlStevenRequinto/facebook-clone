@@ -17,6 +17,7 @@ import MegaPhoneIcon from "../../ui/svg/megaphone-icon";
 import BirthdayPressable from "../../components/child-components/pressable-birthday";
 import SearchIcon from "../../ui/svg/search-icon";
 import EllipsisBigIcon from "../../ui/svg/ellipsis-big-icon";
+import StoryComponent from "../../components/child-components/story-component";
 
 const HomePage = () => {
   const [rowBtnIsToggled, setRowBtnIsToggled] = useState(true);
@@ -229,7 +230,12 @@ const HomePage = () => {
       </div>
       <div className={styles.centerCol}>
         <div className={styles.feedContainer}>
-          <h2>WILL IT COUNT AS CONTRIBS?</h2>
+          <div className={styles.storyContainer}>
+            <div className={styles.storyListsContainer}>
+              <StoryComponent/>
+            </div>
+          </div>
+
           <h2>My Post Container</h2>
           <h2>My Feed Container</h2>
         </div>
