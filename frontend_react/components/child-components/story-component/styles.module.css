@@ -1,0 +1,56 @@
+.container {
+  width: 140px;
+  height: 250px;
+  background-color: grey;
+  cursor: pointer;
+}
+.storyContainer {
+  position: relative;
+  background-color: lightcyan;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.userImageContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* background-color: rgb(77, 77, 190); */
+  width: 64px;
+  height: 64px;
+  padding: 12px;
+}
+
+.userImage {
+  height: 100%;
+}
+.imageBorder {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  border: 4px solid var(--fds-highlight);
+}
+
+.nameContainer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  /* background-color: rgb(85, 57, 110); */
+  padding: 0 12px 12px;
+}
+
+.text {
+  color: var(--always-white);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  font-family: inherit;
+  word-wrap: break-word;
+  line-height: 1.2308;
+}
+
+.videoBackground {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
