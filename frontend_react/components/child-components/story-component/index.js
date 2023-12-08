@@ -19,15 +19,17 @@ const StoryComponent = () => {
   return (
     <div className={styles.container}>
       <div className={styles.storyContainer} onClick={handleVideoClick}>
-        <video
-          id="storyVideo"
-          className={styles.videoBackground}
-          autoPlay={isPlaying}
-          muted
-          loop
-        >
-          <source src={"/videos/sample-vid.mp4"} type="video/mp4" />
-        </video>
+        <div className={styles.videoWrapper}>
+          <video
+            id="storyVideo"
+            className={styles.videoBackground}
+            autoPlay={isPlaying}
+            loop
+          >
+            <source src={"/videos/sample-vid.mp4"} type="video/mp4" />
+          </video>
+          <div className={styles.videoOverlay}></div>
+        </div>
         <div className={styles.userImageContainer}>
           <div className={styles.userImage}>
             <div className={styles.imageBorder}></div>
