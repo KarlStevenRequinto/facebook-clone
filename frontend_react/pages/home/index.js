@@ -6,6 +6,7 @@ import RowButton from "../../components/child-components/row-buttons";
 import { useEffect, useState } from "react";
 import ArrowDownIcon from "../../ui/svg/arrow-down-icon";
 import Link from "next/link";
+import Image from "next/image";
 import SubTitleHeader from "../../components/child-components/sub-title-headers";
 import ImageContainer from "../../components/child-components/image-container";
 import AdPizza from "../../ui/svg/ad-pizza";
@@ -69,6 +70,24 @@ const HomePage = () => {
     );
   };
 
+  const CreateStory = () => {
+    return (
+      <div className={styles.createStoryContainer}>
+        <div className={styles.createStoryContent}>
+          <div className={styles.upperStoryContent}>
+            {/* <Image
+              src={"/static/images/profile-picture.jpg"}
+              // width={140}
+              // height={201}
+              layout="fill"
+              objectFit="cover"
+            /> */}
+          </div>
+          <div className={styles.lowerStoryContent}>asdasd</div>
+        </div>
+      </div>
+    );
+  };
   const pageShortCuts = userProfile.pages;
   const friends = userProfile.friends;
   const onlineFriends = friends.filter((friend) => friend.isOnline);
@@ -232,6 +251,7 @@ const HomePage = () => {
         <div className={styles.feedContainer}>
           <div className={styles.storyContainer}>
             <div className={styles.storyListsContainer}>
+              <CreateStory />
               {/* stories here */}
             </div>
           </div>
