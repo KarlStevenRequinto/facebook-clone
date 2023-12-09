@@ -232,7 +232,7 @@ const HomePage = () => {
         <div className={styles.feedContainer}>
           <div className={styles.storyContainer}>
             <div className={styles.storyListsContainer}>
-              <StoryComponent/>
+              {/* stories here */}
             </div>
           </div>
 

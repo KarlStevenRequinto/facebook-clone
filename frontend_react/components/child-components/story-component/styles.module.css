@@ -27,6 +27,8 @@
   width: 100%;
   height: 100%;
   border: 4px solid var(--fds-highlight);
+  display: flex;
+  justify-content: center;
 }
 
 .nameContainer {
@@ -38,12 +40,14 @@
 }
 
 .text {
+  position: relative;
   color: var(--always-white);
   font-size: 0.8125rem;
   font-weight: 600;
   font-family: inherit;
   word-wrap: break-word;
   line-height: 1.2308;
+  top: 5px;
 }
 
 .videoBackground {
@@ -69,7 +73,7 @@
 }
 
 .storyContainer:hover .videoOverlay {
-  background: rgba(0, 0, 0, 0.082);
+  background: rgba(0, 0, 0, 0.116);
 }
 
 .videoWrapper {
@@ -77,4 +81,7 @@
   width: 100%;
   height: 100%;
   z-index: 1;
+}
+.profilePic{
+  border-radius: 50%;
 }

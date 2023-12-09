@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./styles.module.css";
 import { useState } from "react";
-import ImageContainer from "../image-container";
+import Image from "next/image";
 
-const StoryComponent = () => {
+const StoryComponent = ({ myDayVid,userProfilePic,ppWidth,ppHeight,userName }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const handleVideoClick = () => {
@@ -26,17 +26,27 @@ const StoryComponent = () => {
             autoPlay={isPlaying}
             loop
           >
-            <source src={"/videos/sample-vid.mp4"} type="video/mp4" />
+            {/* "/videos/sample-vid.mp4" */}
+            <source src={myDayVid} type="video/mp4" />
           </video>
           <div className={styles.videoOverlay}></div>
         </div>
         <div className={styles.userImageContainer}>
           <div className={styles.userImage}>
-            <div className={styles.imageBorder}></div>
+            <div className={styles.imageBorder}>
+              <Image
+                // "/static/images/friends_pic/Lerd Robott.jpg"
+                src={userProfilePic}
+                width={ppWidth}
+                height={ppHeight}
+                alt="Profile Pic"
+                className={styles.profilePic}
+              />
+            </div>
           </div>
         </div>
         <div className={styles.nameContainer}>
-          <span className={styles.text}>Lerd Robott</span>
+          <span className={styles.text}>{userName}</span>
         </div>
       </div>
     </div>
