@@ -149,8 +149,18 @@ ul.footerListItems a span {
   background-color: var(--hover-overlay);
 }
 
-.feedContainer { 
+.feedContainer {
+  position: relative;
+  padding-top: 8px;
   width: 650px;
   background-color: pink;
   height: 100%;
+}
+
+.storyContainer {
+  padding: 8px 0;
+  background-color: skyblue;
+}
+.storyListsContainer {
+  padding: 8px 0;
 }
