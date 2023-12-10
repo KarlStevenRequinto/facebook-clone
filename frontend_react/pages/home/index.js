@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 import { page_list, userProfile } from "../../dummy-data";
 import ArrowUpIcon from "../../ui/svg/arrow-up-icon";
 import RowButton from "../../components/child-components/row-buttons";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import ArrowDownIcon from "../../ui/svg/arrow-down-icon";
 import Link from "next/link";
 import Image from "next/image";
@@ -31,6 +31,25 @@ const HomePage = () => {
   const [todayBirthdayFriends, setTodayBirthdayFriends] = useState([]);
   const rowBtnText = rowBtnIsToggled ? "See more" : "See less";
   const pageShortcutsText = isShortcutsToggled ? "See more" : "See less";
+  const containerRef = useRef(null);
+
+  const scrollLeft = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollTo({
+        left: containerRef.current.scrollLeft - 550, // Adjust the scroll amount as needed
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const scrollRight = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollTo({
+        left: containerRef.current.scrollLeft + 550, // Adjust the scroll amount as needed
+        behavior: "smooth",
+      });
+    }
+  };
 
   const handleRowBtnClick = () => {
     rowBtnIsToggled ? setRowBtnIsToggled(false) : setRowBtnIsToggled(true);
@@ -261,9 +280,9 @@ const HomePage = () => {
       <div className={styles.centerCol}>
         <div className={styles.feedContainer}>
           <div className={styles.storyContainer}>
-            <div className={styles.storyListsContainer}>
+            <div className={styles.storyListsContainer} ref={containerRef}>
               <CreateStory />
-              {userProfile.friends.map((item) => {
+              {userProfile.friends.map((item, index) => {
                 return (
                   <StoryComponent
                     myDayVid={item.storyVid}
@@ -271,23 +290,30 @@ const HomePage = () => {
                     ppWidth={40}
                     ppHeight={40}
                     userName={item.fName}
+                    key={index}
                   />
                 );
               })}
-              <div className={`${styles.leftNavBtn} ${styles.navBtn}`}>
-                <LeftArrowIcon
-                  width={24}
-                  height={24}
-                  fill={"var(--always-gray-40)"}
-                />
-              </div>
-              <div className={`${styles.rightNavBtn} ${styles.navBtn}`}>
-                <RightArrowIcon
-                  width={24}
-                  height={24}
-                  fill={"var(--always-gray-40)"}
-                />
-              </div>
+            </div>
+            <div
+              className={`${styles.leftNavBtn} ${styles.navBtn}`}
+              onClick={scrollLeft}
+            >
+              <LeftArrowIcon
+                width={24}
+                height={24}
+                fill={"var(--always-gray-40)"}
+              />
+            </div>
+            <div
+              className={`${styles.rightNavBtn} ${styles.navBtn}`}
+              onClick={scrollRight}
+            >
+              <RightArrowIcon
+                width={24}
+                height={24}
+                fill={"var(--always-gray-40)"}
+              />
             </div>
           </div>
 
