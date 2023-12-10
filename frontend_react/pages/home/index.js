@@ -20,6 +20,8 @@ import SearchIcon from "../../ui/svg/search-icon";
 import EllipsisBigIcon from "../../ui/svg/ellipsis-big-icon";
 import StoryComponent from "../../components/child-components/story-component";
 import AddIcon from "../../ui/svg/add-icon";
+import LeftArrowIcon from "../../ui/svg/left-arrow-icon";
+import RightArrowIcon from "../../ui/svg/right-arrow-icon";
 
 const HomePage = () => {
   const [rowBtnIsToggled, setRowBtnIsToggled] = useState(true);
@@ -261,9 +263,31 @@ const HomePage = () => {
           <div className={styles.storyContainer}>
             <div className={styles.storyListsContainer}>
               <CreateStory />
-              {userProfile.friends.map((item)=>{
-                return <StoryComponent myDayVid={item.storyVid} userProfilePic={item.fImage} ppWidth={40} ppHeight={40} userName={item.fName}/>
+              {userProfile.friends.map((item) => {
+                return (
+                  <StoryComponent
+                    myDayVid={item.storyVid}
+                    userProfilePic={item.fImage}
+                    ppWidth={40}
+                    ppHeight={40}
+                    userName={item.fName}
+                  />
+                );
               })}
+              <div className={`${styles.leftNavBtn} ${styles.navBtn}`}>
+                <LeftArrowIcon
+                  width={24}
+                  height={24}
+                  fill={"var(--always-gray-40)"}
+                />
+              </div>
+              <div className={`${styles.rightNavBtn} ${styles.navBtn}`}>
+                <RightArrowIcon
+                  width={24}
+                  height={24}
+                  fill={"var(--always-gray-40)"}
+                />
+              </div>
             </div>
           </div>
 
