@@ -41,7 +41,14 @@ import SavedIcon from "../ui/modern-icons/saved-icon";
 const page_list = [
   {
     name: "Lerd Robott",
-    icon: <ImageContainer width={36} height={36} isOnline={false} imagePath={"/static/images/friends_pic/Lerd Robott.jpg"}/>,
+    icon: (
+      <ImageContainer
+        width={36}
+        height={36}
+        isOnline={false}
+        imagePath={"/static/images/friends_pic/Lerd Robott.jpg"}
+      />
+    ),
     routeName: "lerdrobott",
   },
   {
@@ -195,6 +202,7 @@ const userProfile = {
       birthday: new Date("Dec 2, 1990"),
       friendSince: new Date("Jan 1, 2020"),
       isOnline: true,
+      storyVid: "/videos/sample-vid.mp4",
     },
     {
       fId: 1235,
@@ -203,6 +211,7 @@ const userProfile = {
       birthday: new Date("Dec 2, 1990"),
       friendSince: new Date("Jan 2, 2020"),
       isOnline: true,
+      storyVid: "/videos/sample-vid.mp4",
     },
     {
       fId: 1236,
@@ -211,6 +220,7 @@ const userProfile = {
       birthday: new Date("Dec 2, 1991"),
       friendSince: new Date("Jan 1, 2020"),
       isOnline: true,
+      storyVid: "/videos/sample-vid.mp4",
     },
     {
       fId: 1237,
@@ -219,6 +229,7 @@ const userProfile = {
       birthday: new Date("Dec 3, 1990"),
       friendSince: new Date("Jan 3, 2020"),
       isOnline: true,
+      storyVid: "/videos/sample-vid.mp4",
     },
     {
       fId: 1238,
@@ -227,6 +238,7 @@ const userProfile = {
       birthday: new Date("Dec 5, 1990"),
       friendSince: new Date("Jan 3, 2020"),
       isOnline: true,
+      storyVid: "/videos/sample-vid.mp4",
     },
     {
       fId: 1220,
@@ -235,6 +247,7 @@ const userProfile = {
       birthday: new Date("Dec 5, 1990"),
       friendSince: new Date("Jan 3, 2020"),
       isOnline: true,
+      storyVid: "/videos/sample-vid.mp4",
     },
     {
       fId: 1239,
@@ -243,6 +256,7 @@ const userProfile = {
       birthday: new Date("Dec 4, 1990"),
       friendSince: new Date("Jan 3, 2020"),
       isOnline: true,
+      storyVid: "/videos/sample-vid.mp4",
     },
     {
       fId: 1234,
@@ -251,6 +265,7 @@ const userProfile = {
       birthday: new Date("Dec 2, 1990"),
       friendSince: new Date("Jan 1, 2020"),
       isOnline: true,
+      storyVid: "/videos/sample-vid.mp4",
     },
     {
       fId: 1235,
@@ -259,6 +274,7 @@ const userProfile = {
       birthday: new Date("Dec 2, 1990"),
       friendSince: new Date("Jan 2, 2020"),
       isOnline: true,
+      storyVid: "/videos/sample-vid.mp4",
     },
     {
       fId: 1236,
@@ -267,6 +283,7 @@ const userProfile = {
       birthday: new Date("Dec 2, 1991"),
       friendSince: new Date("Jan 1, 2020"),
       isOnline: true,
+      storyVid: "/videos/sample-vid.mp4",
     },
     {
       fId: 1237,
@@ -275,6 +292,7 @@ const userProfile = {
       birthday: new Date("Dec 3, 1990"),
       friendSince: new Date("Jan 3, 2020"),
       isOnline: true,
+      storyVid: "/videos/sample-vid.mp4",
     },
     {
       fId: 1238,
@@ -283,6 +301,7 @@ const userProfile = {
       birthday: new Date("Dec 5, 1990"),
       friendSince: new Date("Jan 3, 2020"),
       isOnline: true,
+      storyVid: "/videos/sample-vid.mp4",
     },
     {
       fId: 1220,
@@ -291,6 +310,7 @@ const userProfile = {
       birthday: new Date("Dec 5, 1990"),
       friendSince: new Date("Jan 3, 2020"),
       isOnline: true,
+      storyVid: "/videos/sample-vid.mp4",
     },
     {
       fId: 1239,
@@ -299,6 +319,7 @@ const userProfile = {
       birthday: new Date("Dec 4, 1990"),
       friendSince: new Date("Jan 3, 2020"),
       isOnline: true,
+      storyVid: "/videos/sample-vid.mp4",
     },
     {
       fId: 1234,
@@ -307,6 +328,7 @@ const userProfile = {
       birthday: new Date("Dec 2, 1990"),
       friendSince: new Date("Jan 1, 2020"),
       isOnline: true,
+      storyVid: "/videos/sample-vid.mp4",
     },
     {
       fId: 1235,
@@ -315,6 +337,7 @@ const userProfile = {
       birthday: new Date("Dec 2, 1990"),
       friendSince: new Date("Jan 2, 2020"),
       isOnline: true,
+      storyVid: "/videos/sample-vid.mp4",
     },
     {
       fId: 1236,
@@ -323,6 +346,7 @@ const userProfile = {
       birthday: new Date("Dec 2, 1991"),
       friendSince: new Date("Jan 1, 2020"),
       isOnline: true,
+      storyVid: "/videos/sample-vid.mp4",
     },
     {
       fId: 1237,
@@ -331,6 +355,7 @@ const userProfile = {
       birthday: new Date("Dec 3, 1990"),
       friendSince: new Date("Jan 3, 2020"),
       isOnline: true,
+      storyVid: "/videos/sample-vid.mp4",
     },
     {
       fId: 1238,
@@ -339,6 +364,7 @@ const userProfile = {
       birthday: new Date("Dec 5, 1990"),
       friendSince: new Date("Jan 3, 2020"),
       isOnline: true,
+      storyVid: "/videos/sample-vid.mp4",
     },
     {
       fId: 1220,
@@ -347,6 +373,7 @@ const userProfile = {
       birthday: new Date("Dec 5, 1990"),
       friendSince: new Date("Jan 3, 2020"),
       isOnline: true,
+      storyVid: "/videos/sample-vid.mp4",
     },
     {
       fId: 1239,
@@ -355,6 +382,7 @@ const userProfile = {
       birthday: new Date("Dec 4, 1990"),
       friendSince: new Date("Jan 3, 2020"),
       isOnline: true,
+      storyVid: "/videos/sample-vid.mp4",
     },
   ],
 };

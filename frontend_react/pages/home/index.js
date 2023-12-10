@@ -78,8 +78,6 @@ const HomePage = () => {
           <div className={styles.upperStoryContent}>
             <Image
               src={"/static/images/profile-picture.jpg"}
-              // width={140}
-              // height={201}
               layout="fill"
               objectFit="cover"
               alt="Profile Pic"
@@ -263,7 +261,9 @@ const HomePage = () => {
           <div className={styles.storyContainer}>
             <div className={styles.storyListsContainer}>
               <CreateStory />
-              {/* stories here */}
+              {userProfile.friends.map((item)=>{
+                return <StoryComponent myDayVid={item.storyVid} userProfilePic={item.fImage} ppWidth={40} ppHeight={40} userName={item.fName}/>
+              })}
             </div>
           </div>
 
