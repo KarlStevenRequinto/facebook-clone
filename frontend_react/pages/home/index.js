@@ -19,6 +19,7 @@ import BirthdayPressable from "../../components/child-components/pressable-birth
 import SearchIcon from "../../ui/svg/search-icon";
 import EllipsisBigIcon from "../../ui/svg/ellipsis-big-icon";
 import StoryComponent from "../../components/child-components/story-component";
+import AddIcon from "../../ui/svg/add-icon";
 
 const HomePage = () => {
   const [rowBtnIsToggled, setRowBtnIsToggled] = useState(true);
@@ -75,15 +76,25 @@ const HomePage = () => {
       <div className={styles.createStoryContainer}>
         <div className={styles.createStoryContent}>
           <div className={styles.upperStoryContent}>
-            {/* <Image
+            <Image
               src={"/static/images/profile-picture.jpg"}
               // width={140}
               // height={201}
               layout="fill"
               objectFit="cover"
-            /> */}
+              alt="Profile Pic"
+              className={styles.storyImageBackground}
+            />
           </div>
-          <div className={styles.lowerStoryContent}>asdasd</div>
+          <div className={styles.lowerStoryContent}>
+            <span className={styles.createStoryText}>Create Story</span>
+          </div>
+          <div className={styles.addStoryContainer}>
+            <div className={styles.addStoryPlus}>
+              <AddIcon width={20} height={20} fill="var(--always-white)" />
+            </div>
+          </div>
+          <div className={styles.storyOverlay}></div>
         </div>
       </div>
     );
