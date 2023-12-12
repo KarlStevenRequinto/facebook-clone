@@ -1,3 +1,8 @@
 .container {
-    padding: 12px 16px 10px;
+  padding: 12px 16px 10px;
+}
+
+.lowerContent {
+  display: flex;
+  flex-direction: row;
 }
