@@ -158,6 +158,7 @@ ul.footerListItems a span {
 }
 
 .storyContainer {
+  background-color: rgb(161, 216, 216);
   position: relative;
   padding: 8px 0;
   overflow-x: auto;
@@ -175,92 +176,6 @@ ul.footerListItems a span {
 
 .storyListsContainer::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Edge */
-}
-.createStoryContainer {
-  position: relative;
-  min-width: 140px;
-  width: 140px;
-  height: 250px;
-  cursor: pointer;
-  /* background-color: blueviolet; */
-  margin-right: 8px;
-}
-.createStoryContent {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  height: 100%;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.116);
-}
-
-.upperStoryContent {
-  position: relative;
-  height: 201px;
-  width: 100%;
-  overflow: hidden;
-}
-.lowerStoryContent {
-  position: relative;
-  height: 49px;
-  width: 100%;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-.addStoryContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  width: 40px;
-  position: absolute;
-  background-color: white;
-  bottom: 30px;
-  border-radius: 50%;
-}
-.addStoryPlus {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--accent);
-}
-
-.storyOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0);
-  transition: background 0.2s ease;
-  pointer-events: none;
-}
-.createStoryContainer:hover .storyOverlay {
-  background: rgba(0, 0, 0, 0.116);
-}
-
-.storyImageBackground {
-  transition: transform 0.4s ease;
-}
-.createStoryContainer:hover .storyImageBackground {
-  transform: scale(1.05);
-}
-.createStoryText {
-  font-size: 0.8125rem;
-  font-family: "Segoe UI Historic";
-  font-weight: 600;
-  line-height: 1.2308;
-  position: absolute;
-  bottom: 8px;
-  letter-spacing: 0.3px;
 }
 
 .navBtn {

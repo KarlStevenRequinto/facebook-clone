@@ -2,8 +2,15 @@ import React from "react";
 import styles from "./styles.module.css";
 import { useState } from "react";
 import Image from "next/image";
+import CardContainer from "../../main-component/card-container";
 
-const StoryComponent = ({ myDayVid,userProfilePic,ppWidth,ppHeight,userName }) => {
+const StoryComponent = ({
+  myDayVid,
+  userProfilePic,
+  ppWidth,
+  ppHeight,
+  userName,
+}) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const handleVideoClick = () => {
@@ -17,7 +24,7 @@ const StoryComponent = ({ myDayVid,userProfilePic,ppWidth,ppHeight,userName }) =
   };
 
   return (
-    <div className={styles.container}>
+    <CardContainer className={styles.container}>
       <div className={styles.storyContainer} onClick={handleVideoClick}>
         <div className={styles.videoWrapper}>
           <video
@@ -49,7 +56,7 @@ const StoryComponent = ({ myDayVid,userProfilePic,ppWidth,ppHeight,userName }) =
           <span className={styles.text}>{userName}</span>
         </div>
       </div>
-    </div>
+    </CardContainer>
   );
 };
 

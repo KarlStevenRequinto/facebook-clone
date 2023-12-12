@@ -193,7 +193,7 @@ const userProfile = {
       pageImage: "/static/images/pages_images/groups_2.jpg",
     },
   ],
-
+  profilePic : "/static/images/profile-picture.jpg",
   friends: [
     {
       fId: 1234,

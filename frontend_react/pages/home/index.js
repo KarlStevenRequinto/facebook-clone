@@ -6,7 +6,6 @@ import RowButton from "../../components/child-components/row-buttons";
 import { useEffect, useState, useRef } from "react";
 import ArrowDownIcon from "../../ui/svg/arrow-down-icon";
 import Link from "next/link";
-import Image from "next/image";
 import SubTitleHeader from "../../components/child-components/sub-title-headers";
 import ImageContainer from "../../components/child-components/image-container";
 import AdPizza from "../../ui/svg/ad-pizza";
@@ -22,6 +21,8 @@ import StoryComponent from "../../components/child-components/story-component";
 import AddIcon from "../../ui/svg/add-icon";
 import LeftArrowIcon from "../../ui/svg/left-arrow-icon";
 import RightArrowIcon from "../../ui/svg/right-arrow-icon";
+import CreatePost from "./create_post";
+import CreateStory from "./create_story";
 
 const HomePage = () => {
   const [rowBtnIsToggled, setRowBtnIsToggled] = useState(true);
@@ -92,32 +93,6 @@ const HomePage = () => {
     );
   };
 
-  const CreateStory = () => {
-    return (
-      <div className={styles.createStoryContainer}>
-        <div className={styles.createStoryContent}>
-          <div className={styles.upperStoryContent}>
-            <Image
-              src={"/static/images/profile-picture.jpg"}
-              layout="fill"
-              objectFit="cover"
-              alt="Profile Pic"
-              className={styles.storyImageBackground}
-            />
-          </div>
-          <div className={styles.lowerStoryContent}>
-            <span className={styles.createStoryText}>Create Story</span>
-          </div>
-          <div className={styles.addStoryContainer}>
-            <div className={styles.addStoryPlus}>
-              <AddIcon width={20} height={20} fill="var(--always-white)" />
-            </div>
-          </div>
-          <div className={styles.storyOverlay}></div>
-        </div>
-      </div>
-    );
-  };
   const pageShortCuts = userProfile.pages;
   const friends = userProfile.friends;
   const onlineFriends = friends.filter((friend) => friend.isOnline);
@@ -317,7 +292,9 @@ const HomePage = () => {
             </div>
           </div>
 
-          <h2>My Post Container</h2>
+          <div className={styles.postContainer}>
+            <CreatePost />
+          </div>
           <h2>My Feed Container</h2>
         </div>
       </div>
