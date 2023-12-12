@@ -160,12 +160,10 @@ ul.footerListItems a span {
 .storyContainer {
   position: relative;
   padding: 8px 0;
-  background-color: skyblue;
   overflow-x: auto;
   white-space: nowrap;
 }
 .storyListsContainer {
-  background-color: rgb(205, 238, 127);
   padding: 8px 0;
   display: flex;
   flex-direction: row;
@@ -184,7 +182,7 @@ ul.footerListItems a span {
   width: 140px;
   height: 250px;
   cursor: pointer;
-  background-color: blueviolet;
+  /* background-color: blueviolet; */
   margin-right: 8px;
 }
 .createStoryContent {
