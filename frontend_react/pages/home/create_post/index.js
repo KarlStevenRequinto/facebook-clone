@@ -10,7 +10,10 @@ const CreatePost = () => {
   return (
     <CardContainer className={styles.container}>
       <div className={styles.upperContent}>
-        <div>image</div>
+        <div className={styles.imageContainer}>
+          <img src="/static/images/profile-picture.jpg" className={styles.image}/>
+          <div className={styles.overlay}></div>
+        </div>
         <div>text input</div>
       </div>
       <div className={styles.lowerContent}>
