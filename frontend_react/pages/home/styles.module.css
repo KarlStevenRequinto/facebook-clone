@@ -77,7 +77,7 @@
 
 .divider {
   margin: 8px 16px 0 16px;
-  border-bottom: 1px solid var(--divider);
+  border-bottom: 1px solid var(--disabled-background);
 }
 
 .headerContainer {
@@ -153,12 +153,11 @@ ul.footerListItems a span {
   position: relative;
   padding-top: 8px;
   width: 680px;
-  background-color: pink;
+  background-color: var(--fds-blue-05);
   height: 100%;
 }
 
 .storyContainer {
-  background-color: rgb(161, 216, 216);
   position: relative;
   padding: 8px 0;
   overflow-x: auto;

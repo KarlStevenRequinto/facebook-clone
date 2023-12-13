@@ -11,16 +11,25 @@ const CreatePost = () => {
     <CardContainer className={styles.container}>
       <div className={styles.upperContent}>
         <div className={styles.imageContainer}>
-          <img src="/static/images/profile-picture.jpg" className={styles.image}/>
+          <img
+            src="/static/images/profile-picture.jpg"
+            className={styles.image}
+          />
           <div className={styles.overlay}></div>
         </div>
-        <div>text input</div>
+        <div className={styles.txtInputContainer}>
+          <span className={styles.text}>What's on your mind, Lerd?</span>
+        </div>
       </div>
+
       <div className={styles.lowerContent}>
+      <div className={styles.divider}></div>
         {/* <LiveVideoIcon /> */}
-        <PostButtons />
-        <PostButtons />
-        <PostButtons />
+        <div className={styles.btnsContainer}>
+          <PostButtons />
+          <PostButtons />
+          <PostButtons />
+        </div>
       </div>
     </CardContainer>
   );
