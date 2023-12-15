@@ -6,7 +6,14 @@ import LiveVideoIcon from "../../../ui/modern-icons/live-video-icon";
 import PostButtons from "../../../components/child-components/buttons/post-buttons";
 
 const CreatePost = () => {
-  // const icons = {video: <GamingVideoIcon/>, }
+  const icons = [
+    { iconName: "Live-video", iconImg: "/static/images/icons/live-video.png" },
+    {
+      iconName: "Photo/video",
+      iconImg: "/static/images/icons/photo-video.png",
+    },
+    { iconName: "Reel", iconImg: "/static/images/icons/reel.png" },
+  ];
   return (
     <CardContainer className={styles.container}>
       <div className={styles.upperContent}>
@@ -23,12 +30,18 @@ const CreatePost = () => {
       </div>
 
       <div className={styles.lowerContent}>
-      <div className={styles.divider}></div>
+        <div className={styles.divider}></div>
         {/* <LiveVideoIcon /> */}
         <div className={styles.btnsContainer}>
-          <PostButtons />
-          <PostButtons />
-          <PostButtons />
+          {icons.map((item, index) => {
+            return (
+              <PostButtons
+                buttonText={item.iconName}
+                imagePath={item.iconImg}
+                key={index}
+              />
+            );
+          })}
         </div>
       </div>
     </CardContainer>

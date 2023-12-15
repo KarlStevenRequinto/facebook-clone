@@ -16,7 +16,7 @@
 }
 
 .container:hover {
-  background-color: #f2f3f5;
+  background-color: var(--fds-blue-05);
 }
 
 .iconContainer {

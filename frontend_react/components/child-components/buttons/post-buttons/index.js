@@ -1,7 +1,6 @@
 import styles from "./styles.module.css";
 
-const PostButtons = ({ buttonText = "Live Video" }) => {
-  const imagePath = "/static/images/img-video-sample.png";
+const PostButtons = ({ buttonText,imagePath }) => {
   return (
     <div className={styles.container}>
       <div>
