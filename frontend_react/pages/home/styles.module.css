@@ -17,6 +17,7 @@
   flex-direction: column;
   align-items: center;
   flex: 2.5;
+  /* overflow: hidden; */
 }
 
 .sideBarContent {
@@ -198,4 +199,8 @@ ul.footerListItems a span {
 .rightNavBtn {
   z-index: 3;
   right: 16px;
+}
+.myFeedContainer {
+  background-color: rgb(182, 144, 144);
+  height: 100%;
 }

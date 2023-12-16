@@ -23,6 +23,8 @@ import LeftArrowIcon from "../../ui/svg/left-arrow-icon";
 import RightArrowIcon from "../../ui/svg/right-arrow-icon";
 import CreatePost from "./create_post";
 import CreateStory from "./create_story";
+import CardContainer from "../../components/main-component/card-container";
+import FriendPost from "../../components/main-component/friend-post";
 
 const HomePage = () => {
   const [rowBtnIsToggled, setRowBtnIsToggled] = useState(true);
@@ -292,10 +294,10 @@ const HomePage = () => {
             </div>
           </div>
 
-          <div className={styles.postContainer}>
-            <CreatePost />
+          <CreatePost />
+          <div className={styles.myFeedContainer}>
+            <FriendPost />
           </div>
-          <h2>My Feed Container</h2>
         </div>
       </div>
       <div className={styles.sideBar}>
