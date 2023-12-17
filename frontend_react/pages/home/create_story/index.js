@@ -11,10 +11,11 @@ const CreateStory = () => {
         <div className={styles.upperStoryContent}>
           <Image
             src={"/static/images/profile-picture.jpg"}
-            layout="fill"
-            objectFit="cover"
             alt="Profile Pic"
+            width={140}
+            height={250}
             className={styles.storyImageBackground}
+            priority={true}
           />
         </div>
         <div className={styles.lowerStoryContent}>
