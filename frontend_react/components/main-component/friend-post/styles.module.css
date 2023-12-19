@@ -105,6 +105,8 @@
   border-top-color: var(--divider);
   border-top-style: solid;
 }
+
+
 .reactContainer {
   position: relative;
   margin: 0 16px;
@@ -113,6 +115,9 @@
   display: flex;
   align-items: center;
   flex-direction: row;
+  border-bottom-width: 1px;
+  border-bottom-color: var(--divider);
+  border-bottom-style: solid;
 }
 .reactCount {
   position: relative;
