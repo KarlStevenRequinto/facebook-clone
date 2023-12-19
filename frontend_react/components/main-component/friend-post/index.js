@@ -6,8 +6,9 @@ import FriendsStatusIcon from "../../../ui/svg/friends-status-icon";
 import EllipsisBigIcon from "../../../ui/svg/ellipsis-big-icon";
 import CloseIcon from "../../../ui/svg/close-icon";
 import { ICON_PATH_I } from "../../../constants";
+import HeartEmoticon from "../../../ui/emoticons/heart";
 
-const FriendPost = () => {
+const FriendPost = ({ withAttachments = false }) => {
   return (
     <CardContainer className={styles.container}>
       <div className={styles.postContainer}>
@@ -51,8 +52,26 @@ const FriendPost = () => {
             </div>
           </div>
         </div>
-        <div>Body</div>
-        <div>React Box</div>
+        <div className={styles.bodyContainer}>
+          <div className={styles.bodyTextContent}>
+            My heart is so full seeing you grow into the children every parent
+            would like to be. Thank you for giving so much happiness in my life.
+            May God bless you with everything that you and your parents' hearts
+            truly desire.
+          </div>
+          {/* if content has images */}
+          {withAttachments ? <div>images</div> : <></>}
+        </div>
+        <div className={styles.reactMainContainer}>
+          <div className={styles.reactContainer}>
+            <HeartEmoticon height={18} />
+            <span className={styles.reactCount}>53K</span>
+            <div className={styles.shareCountContainer}>
+              <div className={styles.comments}>441 comments</div>
+              <div className={styles.shares}>3K shares</div>
+            </div>
+          </div>
+        </div>
         <div>Comment Box</div>
       </div>
     </CardContainer>
