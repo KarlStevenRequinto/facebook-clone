@@ -254,6 +254,7 @@ const HomePage = () => {
           </ul>
         </div>
       </div>
+
       <div className={styles.centerCol}>
         <div className={styles.feedContainer}>
           <div className={styles.storyContainer}>
@@ -297,9 +298,12 @@ const HomePage = () => {
           <CreatePost />
           <div className={styles.myFeedContainer}>
             <FriendPost />
+            <FriendPost />
+            <FriendPost />
           </div>
         </div>
       </div>
+
       <div className={styles.sideBar}>
         <div style={{ paddingTop: 8 }}>
           <div className={styles.headerContainer}>

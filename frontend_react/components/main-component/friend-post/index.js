@@ -5,8 +5,9 @@ import ImageContainer from "../../child-components/image-container";
 import FriendsStatusIcon from "../../../ui/svg/friends-status-icon";
 import EllipsisBigIcon from "../../../ui/svg/ellipsis-big-icon";
 import CloseIcon from "../../../ui/svg/close-icon";
-import { ICON_PATH_I } from "../../../constants";
+import { ICON_PATH_I, POST_ICONS } from "../../../constants";
 import HeartEmoticon from "../../../ui/emoticons/heart";
+import PostButtons from "../../child-components/buttons/post-buttons";
 
 const FriendPost = ({ withAttachments = false }) => {
   return (
@@ -72,7 +73,16 @@ const FriendPost = ({ withAttachments = false }) => {
             </div>
           </div>
         </div>
-        <div>Comment Box</div>
+        <div className={styles.interactContainer}>
+          {POST_ICONS.map((item) => {
+            return (
+              <PostButtons
+                buttonText={item.iconName}
+                svg={item.iconComponent}
+              />
+            );
+          })}
+        </div>
       </div>
     </CardContainer>
   );

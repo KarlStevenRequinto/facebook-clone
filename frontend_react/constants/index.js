@@ -1,3 +1,6 @@
+import LikeIcon from "../ui/svg/like-icon";
+import CommentIcon from "../ui/svg/comment-icon";
+import ShareIcon from "../ui/svg/share-icon";
 const ICON_PATH_A =
   "https://static.xx.fbcdn.net/rsrc.php/v3/yz/r/4GR4KRf3hN2.png?_nc_eui2=AeEyZov7OSurAkv-3elNrdCHiXYVTRy2fzKJdhVNHLZ_MpoU8YmL4ZsmzOlZfQgQVf3GPJrghAmtdRaZXWR0GGn_";
 
@@ -24,6 +27,9 @@ const ICON_PATH_H =
 
 const ICON_PATH_I =
   "https://static.xx.fbcdn.net/rsrc.php/v3/yg/r/zET8GsLcBS8.png";
+
+const ICON_PATH_J =
+  "https://static.xx.fbcdn.net/rsrc.php/v3/yc/r/80qnFRz90vM.png";
 
 const ICON_PATH_FEEDS =
   "https://static.xx.fbcdn.net/rsrc.php/v3/yb/r/eECk3ceTaHJ.png?_nc_eui2=AeFV8S9W0cm7pgJHF4WCWqvBi9AM8exRZGeL0Azx7FFkZ_o0gEsXcWufbOVNVoBNxIZ1MIKyDltQvDBlqjpgKNKk";
@@ -55,6 +61,26 @@ const ICON_PATH_PRO_DASHBOARD =
 const ICON_PATH_RECENT_AD =
   "https://static.xx.fbcdn.net/rsrc.php/v3/yv/r/x2_LFd7gCqg.png?_nc_eui2=AeHd2IL32x3jJ_rWbQGYPVHoC2aOHagedWgLZo4dqB51aMOejellteh7qZ72G_KwA2i9qiFLePdpvzlvKYBNZ6Qa";
 
+const POST_ICONS = [
+  {
+    iconName: "like",
+    iconComponent: (
+      <LikeIcon width={20} height={20} backgroundImagePath={ICON_PATH_J} filter={"--filter-secondary-icon"}/>
+    ),
+  },
+  {
+    iconName: "comment",
+    iconComponent: (
+      <CommentIcon width={20} height={20} backgroundImagePath={ICON_PATH_J} filter={"--filter-secondary-icon"}/>
+    ),
+  },
+  {
+    iconName: "share",
+    iconComponent: (
+      <ShareIcon width={20} height={20} backgroundImagePath={ICON_PATH_J} filter={"--filter-secondary-icon"}/>
+    ),
+  },
+];
 export {
   ICON_PATH_A,
   ICON_PATH_B,
@@ -65,6 +91,7 @@ export {
   ICON_PATH_G,
   ICON_PATH_H,
   ICON_PATH_I,
+  ICON_PATH_J,
   ICON_PATH_FEEDS,
   ICON_PATH_ADS_CENTER,
   ICON_PATH_ADS_MANAGER,
@@ -75,4 +102,5 @@ export {
   ICON_PATH_ORDERS_PAYMENT,
   ICON_PATH_PRO_DASHBOARD,
   ICON_PATH_RECENT_AD,
+  POST_ICONS,
 };

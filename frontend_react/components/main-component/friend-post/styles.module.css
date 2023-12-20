@@ -12,7 +12,7 @@
   padding: 12px 16px 0;
 }
 .bodyContainer {
-  /* background-color: rgb(168, 146, 146); */
+  padding: 0 16px;
 }
 
 .bodyTextContent {
@@ -106,7 +106,6 @@
   border-top-style: solid;
 }
 
-
 .reactContainer {
   position: relative;
   margin: 0 16px;
@@ -157,4 +156,8 @@
 
 .shares:hover {
   text-decoration: underline;
+}
+.interactContainer {
+  display: flex;
+  flex-direction: row;
 }

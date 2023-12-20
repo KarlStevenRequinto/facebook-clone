@@ -127,7 +127,8 @@ body {
   --divider: #ced0d4;
   --fb-wordmark: #0866ff;
   --hover-overlay: rgba(0, 0, 0, 0.05);
-  --filter-secondary-icon: invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);
+  --filter-secondary-icon: invert(39%) sepia(21%) saturate(200%)
+    saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);
 }
 a {
   color: inherit;
@@ -153,11 +154,13 @@ img {
 }
 
 .contentContainer {
-  background-color: var(--always-gray-95); 
+  position: relative;
+  background-color: var(--always-gray-95);
   display: flex;
   padding-top: 56px;
   height: 100vh;
   max-height: 100vh;
+  overflow: hidden;
 }
 .layout {
   background-color: var(--always-gray-95);
