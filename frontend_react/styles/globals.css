@@ -157,13 +157,12 @@ img {
   position: relative;
   background-color: var(--always-gray-95);
   display: flex;
-  padding-top: 56px;
   height: 100vh;
   max-height: 100vh;
   overflow: hidden;
 }
 .layout {
-  background-color: var(--always-gray-95);
+  background-color: #0064d1;
   height: 100vh;
   max-height: 100vh;
 }

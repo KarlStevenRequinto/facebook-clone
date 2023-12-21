@@ -74,11 +74,12 @@ const FriendPost = ({ withAttachments = false }) => {
           </div>
         </div>
         <div className={styles.interactContainer}>
-          {POST_ICONS.map((item) => {
+          {POST_ICONS.map((item,index) => {
             return (
               <PostButtons
                 buttonText={item.iconName}
                 svg={item.iconComponent}
+                key={index}
               />
             );
           })}

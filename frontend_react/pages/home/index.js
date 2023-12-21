@@ -118,7 +118,7 @@ const HomePage = () => {
 
   return (
     <main className="contentContainer">
-      <div className={styles.sideBar}>
+      <div className={`${styles.sideBar} ${styles.leftSide}`}>
         <div className={styles.sideBarContent}>
           <div className={styles.pageListContainer}>
             {page_list
@@ -255,56 +255,58 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className={styles.centerCol}>
-        <div className={styles.feedContainer}>
-          <div className={styles.storyContainer}>
-            <div className={styles.storyListsContainer} ref={containerRef}>
-              <CreateStory />
-              {userProfile.friends.map((item, index) => {
-                return (
-                  <StoryComponent
-                    myDayVid={item.storyVid}
-                    userProfilePic={item.fImage}
-                    ppWidth={40}
-                    ppHeight={40}
-                    userName={item.fName}
-                    key={index}
-                  />
-                );
-              })}
+      <div className={styles.overlayCenterCol}>
+        <div className={styles.centerCol}>
+          <div className={styles.feedContainer}>
+            <div className={styles.storyContainer}>
+              <div className={styles.storyListsContainer} ref={containerRef}>
+                <CreateStory />
+                {userProfile.friends.map((item, index) => {
+                  return (
+                    <StoryComponent
+                      myDayVid={item.storyVid}
+                      userProfilePic={item.fImage}
+                      ppWidth={40}
+                      ppHeight={40}
+                      userName={item.fName}
+                      key={index}
+                    />
+                  );
+                })}
+              </div>
+              <div
+                className={`${styles.leftNavBtn} ${styles.navBtn}`}
+                onClick={scrollLeft}
+              >
+                <LeftArrowIcon
+                  width={24}
+                  height={24}
+                  fill={"var(--always-gray-40)"}
+                />
+              </div>
+              <div
+                className={`${styles.rightNavBtn} ${styles.navBtn}`}
+                onClick={scrollRight}
+              >
+                <RightArrowIcon
+                  width={24}
+                  height={24}
+                  fill={"var(--always-gray-40)"}
+                />
+              </div>
             </div>
-            <div
-              className={`${styles.leftNavBtn} ${styles.navBtn}`}
-              onClick={scrollLeft}
-            >
-              <LeftArrowIcon
-                width={24}
-                height={24}
-                fill={"var(--always-gray-40)"}
-              />
-            </div>
-            <div
-              className={`${styles.rightNavBtn} ${styles.navBtn}`}
-              onClick={scrollRight}
-            >
-              <RightArrowIcon
-                width={24}
-                height={24}
-                fill={"var(--always-gray-40)"}
-              />
-            </div>
-          </div>
 
-          <CreatePost />
-          <div className={styles.myFeedContainer}>
-            <FriendPost />
-            <FriendPost />
-            <FriendPost />
+            <CreatePost />
+            <div className={styles.myFeedContainer}>
+              <FriendPost />
+              <FriendPost />
+              <FriendPost />
+            </div>
           </div>
         </div>
       </div>
 
-      <div className={styles.sideBar}>
+      <div className={`${styles.sideBar} ${styles.rightSide}`}>
         <div style={{ paddingTop: 8 }}>
           <div className={styles.headerContainer}>
             <SubTitleHeader
