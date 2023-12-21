@@ -1,7 +1,7 @@
 .container {
   margin-bottom: 12px;
   padding: 12px 16px 10px;
-  background-color: var(--always-gray-95);
+  background-color: #fff;
 }
 
 .lowerContent {

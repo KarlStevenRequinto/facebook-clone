@@ -155,14 +155,15 @@ img {
 
 .contentContainer {
   position: relative;
-  background-color: var(--always-gray-95);
   display: flex;
+  flex-direction: row;
   height: 100vh;
   max-height: 100vh;
   overflow: hidden;
 }
 .layout {
-  background-color: #0064d1;
+  background-color: var(--always-gray-95);
   height: 100vh;
   max-height: 100vh;
+  z-index: 10;
 }

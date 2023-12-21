@@ -1,6 +1,7 @@
-.sideBar {
-  background-color: red;
+.main {
+  padding-top: 56px;
 }
-.centerCol {
-  background-color: pink;
+
+.mainContentContainer {
+  background-color: aqua;
 }
