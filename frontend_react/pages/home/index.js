@@ -25,6 +25,7 @@ import CreatePost from "./create_post";
 import CreateStory from "./create_story";
 import CardContainer from "../../components/main-component/card-container";
 import FriendPost from "../../components/main-component/friend-post";
+import PlusIcon from "../../ui/svg/plus-icon";
 
 const HomePage = () => {
   const [rowBtnIsToggled, setRowBtnIsToggled] = useState(true);
@@ -149,8 +150,8 @@ const HomePage = () => {
             iconComponent={
               <ImageContainer
                 isForIcon={true}
-                width={36}
-                height={36}
+                isOnline={false}
+                icon={<PlusIcon width={36} height={36} fill={"var(--always-gray-40)"}/>}
               />
             }
           />
