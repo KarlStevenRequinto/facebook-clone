@@ -193,7 +193,7 @@ const userProfile = {
       pageImage: "/static/images/pages_images/groups_2.jpg",
     },
   ],
-  profilePic : "/static/images/profile-picture.jpg",
+  profilePic: "/static/images/profile-picture.jpg",
   friends: [
     {
       fId: 1234,
@@ -384,6 +384,22 @@ const userProfile = {
       isOnline: true,
       storyVid: "/videos/sample-vid.mp4",
     },
+  ],
+  groupConversations: [
+    {
+      name: "Kilo's Tito's Wedding To Come",
+      imagePath: "static/images/group_convos/kilos titos.jpg",
+    },
+    { name: "Lanky COC", imagePath: "static/images/group_convos/lankycoc.jpg" },
+    {
+      name: "ForExBatalyon",
+      imagePath: "static/images/group_convos/forexbatalyon.png",
+    },
+    {
+      name: "Villa Estefania Layuping",
+      imagePath: "static/images/group_convos/villaestefanialayuping.jpg",
+    },
+    { name: "ECE2k15", imagePath: "static/images/profile-picture.jpg" },
   ],
 };
 

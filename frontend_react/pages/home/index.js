@@ -98,6 +98,7 @@ const HomePage = () => {
   const pageShortCuts = userProfile.pages;
   const friends = userProfile.friends;
   const onlineFriends = friends.filter((friend) => friend.isOnline);
+  const groupConvos = userProfile.groupConversations;
 
   useEffect(() => {
     const today = new Date();
@@ -116,6 +117,47 @@ const HomePage = () => {
     setTodayBirthdayFriends(filteredFriends);
   }, []);
 
+  const GroupConversation = () => {
+    return (
+      <div className={styles.groupConvoContainer}>
+        <SubTitleHeader dualIcon={false} text="Group Conversations" />
+        {groupConvos ? (
+          groupConvos.map((item, index) => {
+            return (
+              <Link key={index} href={""} style={{ textDecoration: "none" }}>
+                <RowPressable
+                  text={item.name}
+                  iconComponent={
+                    <ImageContainer
+                      isOnline={true}
+                      imagePath={item.imagePath}
+                      altText={item.name}
+                      width={36}
+                      height={36}
+                    />
+                  }
+                />
+              </Link>
+            );
+          })
+        ) : (
+          <></>
+        )}
+        <Link href={""} style={{ textDecoration: "none" }}>
+          <RowPressable
+            text={"Create new group"}
+            iconComponent={
+              <ImageContainer
+                isForIcon={true}
+                width={36}
+                height={36}
+              />
+            }
+          />
+        </Link>
+      </div>
+    );
+  };
   return (
     <main className="contentContainer">
       <div className={`${styles.sideBar} ${styles.leftSide}`}>
@@ -391,6 +433,7 @@ const HomePage = () => {
               </Link>
             ))}
           </div>
+          <GroupConversation />
         </div>
       </div>
     </main>
