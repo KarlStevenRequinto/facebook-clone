@@ -199,7 +199,7 @@ const userProfile = {
       fId: 1234,
       fName: "Nkevin Lim",
       fImage: `/static/images/friends_pic/Nkevin Lim.jpg`,
-      birthday: new Date("Dec 2, 1990"),
+      birthday: new Date("Dec 29, 1990"),
       friendSince: new Date("Jan 1, 2020"),
       isOnline: true,
       storyVid: "/videos/sample-vid.mp4",

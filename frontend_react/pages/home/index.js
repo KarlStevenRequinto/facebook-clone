@@ -151,7 +151,13 @@ const HomePage = () => {
               <ImageContainer
                 isForIcon={true}
                 isOnline={false}
-                icon={<PlusIcon width={36} height={36} fill={"var(--always-gray-40)"}/>}
+                icon={
+                  <PlusIcon
+                    width={36}
+                    height={36}
+                    fill={"var(--always-gray-40)"}
+                  />
+                }
               />
             }
           />
@@ -399,11 +405,16 @@ const HomePage = () => {
             />
           </div>
           <div className={styles.divider} />
-          <div className={styles.headerContainer}>
-            <SubTitleHeader text="Birthdays" dualIcon={false} />
-          </div>
-          <BirthdayPressable bdayFriends={todayBirthdayFriends} />
-          <div className={styles.divider} />
+          {todayBirthdayFriends.length === 0 ? null : (
+            <>
+              <div className={styles.headerContainer}>
+                <SubTitleHeader text="Birthdays" dualIcon={false} />
+              </div>
+              <BirthdayPressable bdayFriends={todayBirthdayFriends} />
+              <div className={styles.divider} />
+            </>
+          )}
+
           <div>
             <div className={styles.headerContainer}>
               <SubTitleHeader
