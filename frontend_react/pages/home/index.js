@@ -117,7 +117,135 @@ const HomePage = () => {
     });
     setTodayBirthdayFriends(filteredFriends);
   }, []);
+  const Divider = () => {
+    return <div className={styles.divider}></div>;
+  };
+  const PageShortCuts = () => {
+    return (
+      <div className={styles.listsContainer}>
+        {pageShortCuts
+          .slice(0, isShortcutsToggled ? 6 : page_list.length)
+          .map((item, index) => (
+            <Link key={index} href={""} style={{ textDecoration: "none" }}>
+              <RowPressable
+                text={item.pageName}
+                iconComponent={
+                  <ImageContainer
+                    isOnline={false}
+                    imagePath={item.pageImage}
+                    width={36}
+                    height={36}
+                    altText={item.pageName}
+                  />
+                }
+              />
+            </Link>
+          ))}
 
+        <div className={styles.rowBtnContainer}>
+          <RowButton
+            text={pageShortcutsText}
+            icon={
+              pageShortcutsText === "See more" ? (
+                <ArrowDownIcon
+                  width={20}
+                  height={20}
+                  fill="var(--primary-icon)"
+                />
+              ) : (
+                <ArrowUpIcon
+                  width={20}
+                  height={20}
+                  fill="var(--primary-icon)"
+                />
+              )
+            }
+            onHandleRowButtonClick={handleShortcutsBtnClick}
+          />
+        </div>
+      </div>
+    );
+  };
+  const PageLists = () => {
+    return (
+      <div className={styles.pageListContainer}>
+        {page_list
+          .slice(0, rowBtnIsToggled ? 6 : page_list.length)
+          .map((page, index) => (
+            <Link
+              key={index}
+              href={`/${page.routeName}`}
+              style={{ textDecoration: "none" }}
+            >
+              <RowPressable text={page.name} iconComponent={page.icon} />
+            </Link>
+          ))}
+        <div className={styles.rowBtnContainer}>
+          <RowButton
+            text={rowBtnText}
+            icon={
+              rowBtnText === "See more" ? (
+                <ArrowDownIcon
+                  width={20}
+                  height={20}
+                  fill="var(--primary-icon)"
+                />
+              ) : (
+                <ArrowUpIcon
+                  width={20}
+                  height={20}
+                  fill="var(--primary-icon)"
+                />
+              )
+            }
+            onHandleRowButtonClick={handleRowBtnClick}
+          />
+        </div>
+      </div>
+    );
+  };
+  const SideBarFooter = () => {
+    return (
+      <div className={styles.sideBarFooter}>
+        <ul className={styles.footerListItems}>
+          <li>
+            <a>Privacy</a>
+            <span className={styles.dot}> · </span>
+          </li>
+          <li>
+            <a>Terms</a>
+            <span className={styles.dot}> · </span>
+          </li>
+          <li>
+            <a>Advertising</a>
+            <span className={styles.dot}> · </span>
+          </li>
+          <li>
+            <a>Ad Choices</a>
+          </li>
+          <li style={{ marginLeft: 4 }}>
+            <AdPizza
+              backgroundImagePath={ICON_PATH_E}
+              filter={"--filter-secondary-icon"}
+            />
+          </li>
+          <li>
+            <a>
+              <span className={styles.dot}>·</span>
+              Cookies<span className={styles.dot}>·</span>
+            </a>
+          </li>
+          <li>
+            <a>More</a>
+            <span className={styles.dot}>·</span>
+          </li>
+          <li>
+            <a>Meta © 2023</a>
+          </li>
+        </ul>
+      </div>
+    );
+  };
   const GroupConversation = () => {
     return (
       <div className={styles.groupConvoContainer}>
@@ -165,45 +293,53 @@ const HomePage = () => {
       </div>
     );
   };
+
+  const ContactsColumn = () => {
+    return (
+      <div>
+        <div className={styles.headerContainer}>
+          <SubTitleHeader
+            text="Contacts"
+            dualIcon={true}
+            iconSecond={<SearchIcon width={16} height={16} fill={"#65676B"} />}
+            icon={<EllipsisBigIcon height={20} width={20} fill={"#65676B"} />}
+          />
+        </div>
+        {onlineFriends.map((friend, index) => (
+          <Link key={index} href={""} style={{ textDecoration: "none" }}>
+            <RowPressable
+              text={friend.fName}
+              iconComponent={
+                <ImageContainer
+                  isOnline={friend.isOnline}
+                  imagePath={friend.fImage}
+                  altText={friend.fName}
+                  width={36}
+                  height={36}
+                />
+              }
+            />
+          </Link>
+        ))}
+      </div>
+    );
+  };
+
+  const Feeds = () => {
+    return (
+      <div className={styles.myFeedContainer}>
+        <FriendPost />
+        <FriendPost />
+        <FriendPost />
+      </div>
+    );
+  };
   return (
     <main className="contentContainer">
       <div className={`${styles.sideBar} ${styles.leftSide}`}>
         <div className={styles.sideBarContent}>
-          <div className={styles.pageListContainer}>
-            {page_list
-              .slice(0, rowBtnIsToggled ? 6 : page_list.length)
-              .map((page, index) => (
-                <Link
-                  key={index}
-                  href={`/${page.routeName}`}
-                  style={{ textDecoration: "none" }}
-                >
-                  <RowPressable text={page.name} iconComponent={page.icon} />
-                </Link>
-              ))}
-            <div className={styles.rowBtnContainer}>
-              <RowButton
-                text={rowBtnText}
-                icon={
-                  rowBtnText === "See more" ? (
-                    <ArrowDownIcon
-                      width={20}
-                      height={20}
-                      fill="var(--primary-icon)"
-                    />
-                  ) : (
-                    <ArrowUpIcon
-                      width={20}
-                      height={20}
-                      fill="var(--primary-icon)"
-                    />
-                  )
-                }
-                onHandleRowButtonClick={handleRowBtnClick}
-              />
-            </div>
-          </div>
-          <div className={styles.divider}></div>
+          <PageLists />
+          <Divider />
           <div
             onMouseEnter={() => setIsShortcutsHovered(true)}
             onMouseLeave={() => setIsShortcutsHovered(false)}
@@ -215,93 +351,10 @@ const HomePage = () => {
                 dualIcon={false}
               />
             </div>
-
-            <div className={styles.listsContainer}>
-              {pageShortCuts
-                .slice(0, isShortcutsToggled ? 6 : page_list.length)
-                .map((item, index) => (
-                  <Link
-                    key={index}
-                    href={""}
-                    style={{ textDecoration: "none" }}
-                  >
-                    <RowPressable
-                      text={item.pageName}
-                      iconComponent={
-                        <ImageContainer
-                          isOnline={false}
-                          imagePath={item.pageImage}
-                          width={36}
-                          height={36}
-                          altText={item.pageName}
-                        />
-                      }
-                    />
-                  </Link>
-                ))}
-
-              <div className={styles.rowBtnContainer}>
-                <RowButton
-                  text={pageShortcutsText}
-                  icon={
-                    pageShortcutsText === "See more" ? (
-                      <ArrowDownIcon
-                        width={20}
-                        height={20}
-                        fill="var(--primary-icon)"
-                      />
-                    ) : (
-                      <ArrowUpIcon
-                        width={20}
-                        height={20}
-                        fill="var(--primary-icon)"
-                      />
-                    )
-                  }
-                  onHandleRowButtonClick={handleShortcutsBtnClick}
-                />
-              </div>
-            </div>
+            <PageShortCuts />
           </div>
         </div>
-        <div className={styles.sideBarFooter}>
-          <ul className={styles.footerListItems}>
-            <li>
-              <a>Privacy</a>
-              <span className={styles.dot}> · </span>
-            </li>
-            <li>
-              <a>Terms</a>
-              <span className={styles.dot}> · </span>
-            </li>
-            <li>
-              <a>Advertising</a>
-              <span className={styles.dot}> · </span>
-            </li>
-            <li>
-              <a>Ad Choices</a>
-            </li>
-            <li style={{ marginLeft: 4 }}>
-              <AdPizza
-                backgroundImagePath={ICON_PATH_E}
-                filter={"--filter-secondary-icon"}
-              />
-            </li>
-            <li>
-              <a>
-                <span className={styles.dot}>·</span>
-                Cookies<span className={styles.dot}>·</span>
-              </a>
-            </li>
-            <li>
-              <a>More</a>
-              <span className={styles.dot}>·</span>
-            </li>
-            <li>
-              <a>Meta © 2023</a>
-            </li>
-          </ul>
-        </div>
+        <SideBarFooter />
       </div>
 
       <div className={styles.overlayCenterCol}>
@@ -344,13 +397,8 @@ const HomePage = () => {
                 />
               </div>
             </div>
-
             <CreatePost />
-            <div className={styles.myFeedContainer}>
-              <FriendPost />
-              <FriendPost />
-              <FriendPost />
-            </div>
+            <Feeds />
           </div>
         </div>
       </div>
@@ -404,47 +452,17 @@ const HomePage = () => {
               text="Create Promotion"
             />
           </div>
-          <div className={styles.divider} />
+          <Divider />
           {todayBirthdayFriends.length === 0 ? null : (
             <>
               <div className={styles.headerContainer}>
                 <SubTitleHeader text="Birthdays" dualIcon={false} />
               </div>
               <BirthdayPressable bdayFriends={todayBirthdayFriends} />
-              <div className={styles.divider} />
+              <Divider />
             </>
           )}
-
-          <div>
-            <div className={styles.headerContainer}>
-              <SubTitleHeader
-                text="Contacts"
-                dualIcon={true}
-                iconSecond={
-                  <SearchIcon width={16} height={16} fill={"#65676B"} />
-                }
-                icon={
-                  <EllipsisBigIcon height={20} width={20} fill={"#65676B"} />
-                }
-              />
-            </div>
-            {onlineFriends.map((friend, index) => (
-              <Link key={index} href={""} style={{ textDecoration: "none" }}>
-                <RowPressable
-                  text={friend.fName}
-                  iconComponent={
-                    <ImageContainer
-                      isOnline={friend.isOnline}
-                      imagePath={friend.fImage}
-                      altText={friend.fName}
-                      width={36}
-                      height={36}
-                    />
-                  }
-                />
-              </Link>
-            ))}
-          </div>
+          <ContactsColumn />
           <GroupConversation />
         </div>
       </div>
