@@ -1,4 +1,4 @@
 .container {
-  padding-top: 56px;
-  background-color: red;
+  min-width: 360px;
+  background-color: #ffff;
 }

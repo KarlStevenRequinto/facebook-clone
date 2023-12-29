@@ -4,4 +4,31 @@
 
 .mainContentContainer {
   background-color: aqua;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mainContentOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  box-sizing: content-box;
+  /* background-color: pink; */
+}
+
+.sideBar {
+  position: fixed;
+  top: 56px;
+  bottom: 0;
+
+  box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.2);
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./styles.module.css";
 import CardContainer from "../card-container";
 import ImageContainer from "../../child-components/image-container";
