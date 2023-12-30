@@ -9,24 +9,22 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 0 32px;
+  width: 932px;
 }
 
 .mainContentOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   overflow-y: auto;
   box-sizing: content-box;
-  /* background-color: pink; */
+  width: 100%;
 }
 
 .sideBar {
-  position: fixed;
+  position: relative;
   top: 56px;
   bottom: 0;
 
