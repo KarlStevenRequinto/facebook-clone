@@ -250,46 +250,51 @@ const HomePage = () => {
     return (
       <div className={styles.groupConvoContainer}>
         <SubTitleHeader dualIcon={false} text="Group Conversations" />
-        {groupConvos ? (
-          groupConvos.map((item, index) => {
-            return (
-              <Link key={index} href={""} style={{ textDecoration: "none" }}>
-                <RowPressable
-                  text={item.name}
-                  iconComponent={
-                    <ImageContainer
-                      isOnline={true}
-                      imagePath={item.imagePath}
-                      altText={item.name}
+        <div style={{ paddingTop: 8, paddingBottom: 8 }}>
+          {groupConvos
+            ? groupConvos.map((item, index) => {
+                return (
+                  <Link
+                    key={index}
+                    href={""}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <RowPressable
+                      text={item.name}
+                      iconComponent={
+                        <ImageContainer
+                          isOnline={true}
+                          imagePath={item.imagePath}
+                          altText={item.name}
+                          width={36}
+                          height={36}
+                        />
+                      }
+                    />
+                  </Link>
+                );
+              })
+            : null}
+
+          <Link href={""} style={{ textDecoration: "none" }}>
+            <RowPressable
+              text={"Create new group"}
+              iconComponent={
+                <ImageContainer
+                  isForIcon={true}
+                  isOnline={false}
+                  icon={
+                    <PlusIcon
                       width={36}
                       height={36}
+                      fill={"var(--always-gray-40)"}
                     />
                   }
                 />
-              </Link>
-            );
-          })
-        ) : (
-          <></>
-        )}
-        <Link href={""} style={{ textDecoration: "none" }}>
-          <RowPressable
-            text={"Create new group"}
-            iconComponent={
-              <ImageContainer
-                isForIcon={true}
-                isOnline={false}
-                icon={
-                  <PlusIcon
-                    width={36}
-                    height={36}
-                    fill={"var(--always-gray-40)"}
-                  />
-                }
-              />
-            }
-          />
-        </Link>
+              }
+            />
+          </Link>
+        </div>
       </div>
     );
   };
