@@ -31,6 +31,11 @@ const ICON_PATH_I =
 const ICON_PATH_J =
   "https://static.xx.fbcdn.net/rsrc.php/v3/yc/r/80qnFRz90vM.png";
 
+const ICON_PATH_K =
+  "https://static.xx.fbcdn.net/rsrc.php/v3/yY/r/1uYwAduMfJy.png";
+
+const ICON_PATH_L =
+  "https://static.xx.fbcdn.net/rsrc.php/v3/yk/r/TGPkhX5c_cc.png";
 const ICON_PATH_FEEDS =
   "https://static.xx.fbcdn.net/rsrc.php/v3/yb/r/eECk3ceTaHJ.png?_nc_eui2=AeFV8S9W0cm7pgJHF4WCWqvBi9AM8exRZGeL0Azx7FFkZ_o0gEsXcWufbOVNVoBNxIZ1MIKyDltQvDBlqjpgKNKk";
 
@@ -65,19 +70,34 @@ const POST_ICONS = [
   {
     iconName: "like",
     iconComponent: (
-      <LikeIcon width={20} height={20} backgroundImagePath={ICON_PATH_J} filter={"--filter-secondary-icon"}/>
+      <LikeIcon
+        width={20}
+        height={20}
+        backgroundImagePath={ICON_PATH_J}
+        filter={"--filter-secondary-icon"}
+      />
     ),
   },
   {
     iconName: "comment",
     iconComponent: (
-      <CommentIcon width={20} height={20} backgroundImagePath={ICON_PATH_J} filter={"--filter-secondary-icon"}/>
+      <CommentIcon
+        width={20}
+        height={20}
+        backgroundImagePath={ICON_PATH_J}
+        filter={"--filter-secondary-icon"}
+      />
     ),
   },
   {
     iconName: "share",
     iconComponent: (
-      <ShareIcon width={20} height={20} backgroundImagePath={ICON_PATH_J} filter={"--filter-secondary-icon"}/>
+      <ShareIcon
+        width={20}
+        height={20}
+        backgroundImagePath={ICON_PATH_J}
+        filter={"--filter-secondary-icon"}
+      />
     ),
   },
 ];
@@ -92,6 +112,7 @@ export {
   ICON_PATH_H,
   ICON_PATH_I,
   ICON_PATH_J,
+  ICON_PATH_K,
   ICON_PATH_FEEDS,
   ICON_PATH_ADS_CENTER,
   ICON_PATH_ADS_MANAGER,
