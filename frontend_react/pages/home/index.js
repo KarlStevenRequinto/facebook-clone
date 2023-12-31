@@ -8,12 +8,8 @@ import ArrowDownIcon from "../../ui/svg/arrow-down-icon";
 import Link from "next/link";
 import SubTitleHeader from "../../components/child-components/sub-title-headers";
 import ImageContainer from "../../components/child-components/image-container";
-import AdPizza from "../../ui/svg/ad-pizza";
 import { ICON_PATH_E, ICON_PATH_F } from "../../constants";
-import EllipsisIcon from "../../ui/svg/ellipsis-icon";
 import SubRowPressable from "../../components/child-components/sub-row-pressable";
-import SwitchPageIcon from "../../ui/svg/switch-page-icon";
-import MegaPhoneIcon from "../../ui/svg/megaphone-icon";
 import BirthdayPressable from "../../components/child-components/pressable-birthday";
 import SearchIcon from "../../ui/svg/search-icon";
 import EllipsisBigIcon from "../../ui/svg/ellipsis-big-icon";
@@ -26,6 +22,7 @@ import CreateStory from "./create_story";
 import CardContainer from "../../components/main-component/card-container";
 import FriendPost from "../../components/main-component/friend-post";
 import PlusIcon from "../../ui/svg/plus-icon";
+import SvgIcon from "../../ui/svg/svg-icon";
 
 const HomePage = () => {
   const [rowBtnIsToggled, setRowBtnIsToggled] = useState(true);
@@ -86,11 +83,12 @@ const HomePage = () => {
   const EllipsisBtn = () => {
     return (
       <div className={styles.ellipsisContainer}>
-        <EllipsisIcon
+        <SvgIcon
           height={16}
           width={16}
           filter={"--filter-secondary-icon"}
           backgroundImagePath={ICON_PATH_E}
+          backgroundPosition={"-161px -126px"}
         />
       </div>
     );
@@ -224,9 +222,12 @@ const HomePage = () => {
             <a>Ad Choices</a>
           </li>
           <li style={{ marginLeft: 4 }}>
-            <AdPizza
+            <SvgIcon
               backgroundImagePath={ICON_PATH_E}
               filter={"--filter-secondary-icon"}
+              backgroundPosition={"-51px -147px"}
+              width={12}
+              height={12}
             />
           </li>
           <li>
@@ -436,18 +437,17 @@ const HomePage = () => {
             )}
             <SubRowPressable
               icon={
-                <SwitchPageIcon
-                  width={20}
-                  height={20}
-                  backgroundImagePath={ICON_PATH_F}
-                  filter={"--filter-secondary-icon"}
-                />
+                <SvgIcon backgroundPosition= {"0px -62px"} width={20}
+                height={20}
+                backgroundImagePath={ICON_PATH_F}
+                filter={"--filter-secondary-icon"}/>
               }
               text="Switch into Page"
             />
             <SubRowPressable
               icon={
-                <MegaPhoneIcon
+                <SvgIcon
+                  backgroundPosition={"0px -293px"}
                   width={20}
                   height={20}
                   backgroundImagePath={ICON_PATH_F}

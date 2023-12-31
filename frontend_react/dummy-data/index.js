@@ -1,9 +1,5 @@
 import ImageContainer from "../components/child-components/image-container";
-import FriendsIcon from "../ui/modern-icons/friends-icon";
-import VideoPageIcon from "../ui/modern-icons/modern-video-icon";
-import GroupsPageIcon from "../ui/modern-icons/modern-group-icon";
 import FeedsIcon from "../ui/modern-icons/feeds-icon";
-import MarketplacePageIcon from "../ui/modern-icons/modern-marketplace-icon";
 import AdsCenterIcon from "../ui/modern-icons/ads-center-icon";
 import {
   ICON_PATH_A,
@@ -22,21 +18,14 @@ import {
   ICON_PATH_RECENT_AD,
 } from "../constants";
 import AdsManagerIcon from "../ui/modern-icons/ads-manager-icon";
-import BloodDonationIcon from "../ui/modern-icons/blood-donation-icon";
 import ClimateScienceCenterIcon from "../ui/modern-icons/climate-science-center-icon";
-import EventsIcon from "../ui/modern-icons/events-icon";
-import Fundraisers from "../ui/modern-icons/fundraisers-icon";
 import GamingVideoIcon from "../ui/modern-icons/gaming-video-icon";
-import MemoriesIcon from "../ui/modern-icons/memories-icon";
-import MessengerIcon from "../ui/modern-icons/messenger-icon";
 import MessengerKidsIcon from "../ui/modern-icons/messenger-kids-icon";
 import MetaBizSuiteIcon from "../ui/modern-icons/meta-biz-suite-icon";
 import OrdersPaymentsIcon from "../ui/modern-icons/orders-payments-icon";
-import PagesIcon from "../ui/modern-icons/pages-icon";
-import PlayGamesIcon from "../ui/modern-icons/play-games-icon";
 import ProfessionalDashboardIcon from "../ui/modern-icons/professional-dashboard-icon";
 import RecentAdIcon from "../ui/modern-icons/recent-ad-icon";
-import SavedIcon from "../ui/modern-icons/saved-icon";
+import SvgIcon from "../ui/svg/svg-icon";
 
 const page_list = [
   {
@@ -53,22 +42,50 @@ const page_list = [
   },
   {
     name: "Friends",
-    icon: <FriendsIcon backgroundImagePath={ICON_PATH_A} />,
+    icon: (
+      <SvgIcon
+        backgroundImagePath={ICON_PATH_A}
+        backgroundPosition={"0 -296px"}
+        width={36}
+        height={36}
+      />
+    ),
     routeName: "friends",
   },
   {
     name: "Video",
-    icon: <VideoPageIcon backgroundImagePath={ICON_PATH_A} />,
+    icon: (
+      <SvgIcon
+        backgroundImagePath={ICON_PATH_A}
+        backgroundPosition={"0 -518px"}
+        width={36}
+        height={36}
+      />
+    ),
     routeName: "watch",
   },
   {
     name: "Groups",
-    icon: <GroupsPageIcon backgroundImagePath={ICON_PATH_A} />,
+    icon: (
+      <SvgIcon
+        backgroundImagePath={ICON_PATH_A}
+        backgroundPosition={"0 -37px"}
+        width={36}
+        height={36}
+      />
+    ),
     routeName: "groups",
   },
   {
     name: "Marketplace",
-    icon: <MarketplacePageIcon backgroundImagePath={ICON_PATH_A} />,
+    icon: (
+      <SvgIcon
+        backgroundImagePath={ICON_PATH_A}
+        backgroundPosition={"0 -407px"}
+        width={36}
+        height={36}
+      />
+    ),
     routeName: "marketplace",
   },
   {
@@ -83,7 +100,14 @@ const page_list = [
   },
   {
     name: "Blood Donations",
-    icon: <BloodDonationIcon backgroundImagePath={ICON_PATH_B} />,
+    icon: (
+      <SvgIcon
+        backgroundPosition={"-722px -175px"}
+        backgroundImagePath={ICON_PATH_B}
+        width={36}
+        height={36}
+      />
+    ),
     routeName: "blooddonations",
   },
   {
@@ -93,7 +117,14 @@ const page_list = [
   },
   {
     name: "Events",
-    icon: <EventsIcon backgroundImagePath={ICON_PATH_C} />,
+    icon: (
+      <SvgIcon
+        backgroundImagePath={ICON_PATH_C}
+        backgroundPosition={"0px -37px"}
+        width={36}
+        height={36}
+      />
+    ),
     routeName: "events",
   },
   {
@@ -103,7 +134,14 @@ const page_list = [
   },
   {
     name: "Fundraisers",
-    icon: <Fundraisers backgroundImagePath={ICON_PATH_A} />,
+    icon: (
+      <SvgIcon
+        backgroundImagePath={ICON_PATH_A}
+        backgroundPosition={"0px -333px"}
+        width={36}
+        height={36}
+      />
+    ),
     routeName: "fundraisers/explore",
   },
   {
@@ -113,12 +151,26 @@ const page_list = [
   },
   {
     name: "Memories",
-    icon: <MemoriesIcon backgroundImagePath={ICON_PATH_A} />,
+    icon: (
+      <SvgIcon
+        backgroundImagePath={ICON_PATH_A}
+        backgroundPosition={"0px -444px"}
+        width={36}
+        height={36}
+      />
+    ),
     routeName: "memories",
   },
   {
     name: "Messenger",
-    icon: <MessengerIcon backgroundImagePath={ICON_PATH_D} />,
+    icon: (
+      <SvgIcon
+        backgroundImagePath={ICON_PATH_D}
+        backgroundPosition={"0px 0px"}
+        width={36}
+        height={36}
+      />
+    ),
     routeName: "messages",
   },
   {
@@ -138,12 +190,26 @@ const page_list = [
   },
   {
     name: "Pages",
-    icon: <PagesIcon backgroundImagePath={ICON_PATH_A} />,
+    icon: (
+      <SvgIcon
+        backgroundImagePath={ICON_PATH_A}
+        backgroundPosition={"0 -111px"}
+        width={36}
+        height={36}
+      />
+    ),
     routeName: "pages",
   },
   {
     name: "Play Games",
-    icon: <PlayGamesIcon backgroundImagePath={ICON_PATH_A} />,
+    icon: (
+      <SvgIcon
+        backgroundImagePath={ICON_PATH_A}
+        backgroundPosition={"0px -74px"}
+        width={36}
+        height={36}
+      />
+    ),
     routeName: "gaming",
   },
   {
@@ -158,7 +224,7 @@ const page_list = [
   },
   {
     name: "Saved",
-    icon: <SavedIcon backgroundImagePath={ICON_PATH_A} />,
+    icon: <SvgIcon backgroundImagePath={ICON_PATH_A} backgroundPosition={"0px -185px"} width={36} height={36}/>,
     routeName: "saved",
   },
 ];

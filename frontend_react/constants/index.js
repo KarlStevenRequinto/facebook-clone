@@ -1,6 +1,5 @@
-import LikeIcon from "../ui/svg/like-icon";
-import CommentIcon from "../ui/svg/comment-icon";
-import ShareIcon from "../ui/svg/share-icon";
+import SvgIcon from "../ui/svg/svg-icon";
+
 const ICON_PATH_A =
   "https://static.xx.fbcdn.net/rsrc.php/v3/yz/r/4GR4KRf3hN2.png?_nc_eui2=AeEyZov7OSurAkv-3elNrdCHiXYVTRy2fzKJdhVNHLZ_MpoU8YmL4ZsmzOlZfQgQVf3GPJrghAmtdRaZXWR0GGn_";
 
@@ -70,33 +69,36 @@ const POST_ICONS = [
   {
     iconName: "like",
     iconComponent: (
-      <LikeIcon
+      <SvgIcon
         width={20}
         height={20}
         backgroundImagePath={ICON_PATH_J}
         filter={"--filter-secondary-icon"}
+        backgroundPosition={"0px -739px"}
       />
     ),
   },
   {
     iconName: "comment",
     iconComponent: (
-      <CommentIcon
+      <SvgIcon
         width={20}
         height={20}
         backgroundImagePath={ICON_PATH_J}
         filter={"--filter-secondary-icon"}
+        backgroundPosition={"0px -550px"}
       />
     ),
   },
   {
     iconName: "share",
     iconComponent: (
-      <ShareIcon
+      <SvgIcon
         width={20}
         height={20}
         backgroundImagePath={ICON_PATH_J}
         filter={"--filter-secondary-icon"}
+        backgroundPosition={"0px -739px"}
       />
     ),
   },

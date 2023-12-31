@@ -4,10 +4,10 @@ import CardContainer from "../card-container";
 import ImageContainer from "../../child-components/image-container";
 import FriendsStatusIcon from "../../../ui/svg/friends-status-icon";
 import EllipsisBigIcon from "../../../ui/svg/ellipsis-big-icon";
-import CloseIcon from "../../../ui/svg/close-icon";
 import { ICON_PATH_I, POST_ICONS } from "../../../constants";
 import HeartEmoticon from "../../../ui/emoticons/heart";
 import PostButtons from "../../child-components/buttons/post-buttons";
+import SvgIcon from "../../../ui/svg/svg-icon";
 
 const FriendPost = ({ withAttachments = false }) => {
   return (
@@ -44,12 +44,9 @@ const FriendPost = ({ withAttachments = false }) => {
               <EllipsisBigIcon height={20} width={20} fill={"#65676B"} />
             </div>
             <div className={styles.iconHeaderContainer}>
-              <CloseIcon
-                backgroundImagePath={ICON_PATH_I}
+              <SvgIcon backgroundImagePath={ICON_PATH_I}
                 width={20}
-                height={20}
-                filter={"--filter-secondary-icon"}
-              />
+                height={20} filter={"--filter-secondary-icon"} backgroundPosition={"0px -402px"}/>
             </div>
           </div>
         </div>

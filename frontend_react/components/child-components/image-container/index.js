@@ -1,4 +1,3 @@
-import MessengerIcon from "../../../ui/svg/messenger-icon";
 import styles from "./styles.module.css";
 const ImageContainer = ({
   isOnline = true,

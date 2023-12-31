@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./styles.module.css";
-import BirthdayIcon from "../../../ui/modern-icons/birthday-icons";
 import { ICON_PATH_G } from "../../../constants";
+import SvgIcon from "../../../ui/svg/svg-icon";
 
 const BirthdayPressable = ({ bdayFriends }) => {
   const birthdayNames = bdayFriends.map((friend) => friend.fName);
@@ -24,10 +24,11 @@ const BirthdayPressable = ({ bdayFriends }) => {
       <div className={styles.outerContainer}>
         <div className={styles.innerContainer}>
           <div className={styles.iconContainer}>
-            <BirthdayIcon
+            <SvgIcon
               width={36}
               height={36}
               backgroundImagePath={ICON_PATH_G}
+              backgroundPosition={"0 0"}
             />
           </div>
           <div className={styles.textContainer}>{renderBirthdayNames()}</div>
