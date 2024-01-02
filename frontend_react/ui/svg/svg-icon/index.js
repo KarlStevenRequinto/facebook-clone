@@ -6,6 +6,7 @@ const SvgIcon = ({
   width,
   height,
   filter,
+  WebkitFilter
 }) => {
   const iconStyle = {
     backgroundImage: `url(${backgroundImagePath})`,
@@ -14,8 +15,9 @@ const SvgIcon = ({
     width: width,
     height: height,
     backgroundRepeat: "no-repeat",
-    display: "block",
+    display: "inline-block",
     filter: `var(${filter})`,
+    WebkitFilter: WebkitFilter ? 'var(--filter-always-white)' : null,
   };
   return <span data-visualcompletion="css-img" style={iconStyle}></span>;
 };

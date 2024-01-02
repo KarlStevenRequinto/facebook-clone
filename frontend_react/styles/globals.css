@@ -101,6 +101,7 @@ body {
   --fds-yellow-20: #ffba00;
   --accent: #0866ff;
   --always-white: #ffffff;
+  --filter-always-white: invert(100%);
   --primary-icon: #050505;
   --always-black: black;
   --always-dark-gradient: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));

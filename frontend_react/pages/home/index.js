@@ -37,7 +37,7 @@ const HomePage = () => {
   const scrollLeft = () => {
     if (containerRef.current) {
       containerRef.current.scrollTo({
-        left: containerRef.current.scrollLeft - 550, // Adjust the scroll amount as needed
+        left: containerRef.current.scrollLeft - 550,
         behavior: "smooth",
       });
     }
@@ -46,7 +46,7 @@ const HomePage = () => {
   const scrollRight = () => {
     if (containerRef.current) {
       containerRef.current.scrollTo({
-        left: containerRef.current.scrollLeft + 550, // Adjust the scroll amount as needed
+        left: containerRef.current.scrollLeft + 550,
         behavior: "smooth",
       });
     }
