@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const SvgIcon = ({
   backgroundImagePath,
@@ -6,7 +6,7 @@ const SvgIcon = ({
   width,
   height,
   filter,
-  WebkitFilter
+  WebkitFilter,
 }) => {
   const iconStyle = {
     backgroundImage: `url(${backgroundImagePath})`,
@@ -17,7 +17,7 @@ const SvgIcon = ({
     backgroundRepeat: "no-repeat",
     display: "inline-block",
     filter: `var(${filter})`,
-    WebkitFilter: WebkitFilter ? 'var(--filter-always-white)' : null,
+    WebkitFilter: WebkitFilter,
   };
   return <span data-visualcompletion="css-img" style={iconStyle}></span>;
 };
