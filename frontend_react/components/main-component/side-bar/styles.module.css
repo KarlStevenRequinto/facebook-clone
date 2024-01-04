@@ -3,3 +3,30 @@
   background-color: #ffff;
   z-index: 98;
 }
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 16px 16px 0 16px;
+}
+
+.headerTextContainer h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  font-family: "Segoe UI Historic";
+  word-wrap: break-word
+}
+.iconContainer {
+  background-color: var(--disabled-background);
+  text-decoration: none;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}

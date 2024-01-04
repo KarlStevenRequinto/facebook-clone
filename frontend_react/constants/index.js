@@ -48,6 +48,9 @@ const ICON_PATH_O =
 const ICON_PATH_P =
   "https://static.xx.fbcdn.net/rsrc.php/v3/yR/r/eNxBaPrLX11.png?_nc_eui2=AeEkNfdPSDRxsx4jrkQhX8K-xsuDjR6LEB7Gy4ONHosQHrqGyZR8kZOvJSlu3RjxvGt8L-HohwuizRPk2BDuHfdi";
 
+const ICON_PATH_Q =
+  "https://static.xx.fbcdn.net/rsrc.php/v3/yb/r/AgQOPcRn5zV.png?_nc_eui2=AeGila7oBax4IzKV3sUWQaagY0zmCYxYoMxjTOYJjFigzLrjBu7CnzVxVtP2wEgkw2GcC_-uUiNaLHJ_n1mmIGm_";
+
 const ICON_PATH_FEEDS =
   "https://static.xx.fbcdn.net/rsrc.php/v3/yb/r/eECk3ceTaHJ.png?_nc_eui2=AeFV8S9W0cm7pgJHF4WCWqvBi9AM8exRZGeL0Azx7FFkZ_o0gEsXcWufbOVNVoBNxIZ1MIKyDltQvDBlqjpgKNKk";
 
@@ -133,6 +136,7 @@ export {
   ICON_PATH_N,
   ICON_PATH_O,
   ICON_PATH_P,
+  ICON_PATH_Q,
   ICON_PATH_FEEDS,
   ICON_PATH_ADS_CENTER,
   ICON_PATH_ADS_MANAGER,

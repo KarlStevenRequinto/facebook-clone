@@ -81,6 +81,7 @@ const WatchPage = () => {
       <SideBar
         sideBarStyle={styles.sideBar}
         children={<VideoSidebarContent />}
+        headerText={"Video"}
       />
       <div className={styles.mainContentOverlay}>
         <div className={`${styles.main} ${styles.mainContentContainer}`}>
