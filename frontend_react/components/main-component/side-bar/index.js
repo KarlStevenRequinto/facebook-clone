@@ -3,6 +3,7 @@ import styles from "./styles.module.css";
 import SvgIcon from "../../../ui/svg/svg-icon";
 import { ICON_PATH_Q } from "../../../constants";
 import Link from "next/link";
+import SearchIcon from "../../../ui/svg/search-icon";
 
 const SideBar = ({ sideBarStyle, headerText, children }) => {
   const [iconHovered, setIconHovered] = useState(false);
@@ -36,6 +37,20 @@ const SideBar = ({ sideBarStyle, headerText, children }) => {
             width={20}
           />
         </Link>
+      </div>
+      <div className={styles.searchContainer}>
+        <div className={styles.searchbarContainer}>
+          <div className={styles.searchIconContainer}>
+            <span style={{ display: "flex", alignItems: "center" }}>
+              <SearchIcon
+                width={16}
+                height={16}
+                fill={"var(--always-gray-40)"}
+              />
+            </span>
+          </div>
+          <input className={styles.searchBox} placeholder="Search videos" />
+        </div>
       </div>
       {children}
     </div>
