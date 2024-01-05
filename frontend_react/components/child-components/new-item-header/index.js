@@ -4,7 +4,7 @@ import styles from "./styles.module.css";
 const NewItemHeader = () => {
   return (
     <div className={styles.container}>
-      <div>Icon</div>
+      <div><img src="/static/images/misc/nba_logo_new_item.jpg"/></div>
       <div>
         <div>New videos from NBA on ESPN and SPIT</div>
         <div>32 minutes ago</div>
