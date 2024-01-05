@@ -1,0 +1,10 @@
+.container {
+    background-color: pink;
+    height: 136px;
+}
+
+.newItemHeaderContainer {
+    background-color: yellow;
+    display: flex;
+    flex-direction: row;
+}

@@ -1,7 +1,7 @@
 import FriendPost from "../../components/main-component/friend-post";
 import SideBar from "../../components/main-component/side-bar";
 import styles from "./styles.module.css";
-import SvgIcon from "../../ui/svg/svg-icon";
+
 import {
   ICON_PATH_M,
   ICON_PATH_N,
@@ -11,6 +11,7 @@ import {
 import SidebarRowPressable from "../../components/child-components/sidebar-row-pressable";
 import { useState } from "react";
 import Link from "next/link";
+import NewVideoHeader from "./new-video-header";
 
 const WatchPage = () => {
   const rowItems = [
@@ -85,12 +86,7 @@ const WatchPage = () => {
       />
       <div className={styles.mainContentOverlay}>
         <div className={`${styles.main} ${styles.mainContentContainer}`}>
-          <FriendPost />
-          <FriendPost />
-          <FriendPost />
-          <FriendPost />
-          <FriendPost />
-          <FriendPost />
+          <NewVideoHeader/>
         </div>
       </div>
     </main>
